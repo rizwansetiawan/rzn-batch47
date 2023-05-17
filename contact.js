@@ -40,7 +40,7 @@ let alamatEmail="rizwandhoel@gmail.com";
 
 let elementBaruHtml = document.createElement("a");
 
-elementBaruHtml.href = `mailto:${alamatEmail}? subject=${subject}&body=hello geisss nama saya 
+elementBaruHtml.href = `mailto:${alamatEmail}?subject=${subject}&body=hello geisss nama saya 
 ${name} masukan anda terhadap president kita: ${tArea} anda memilih ${subject} WOW !!! \n
 ini no hp saya silahkan call ${nohp} INI KO SUBJECT NYA GADA YA GIMANA YA GESSSSSS ?????padahal udah di panggil`;
 
