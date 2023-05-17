@@ -39,10 +39,13 @@ console.log(objectId)
 let alamatEmail="rizwandhoel@gmail.com";
 
 let elementBaruHtml = document.createElement("a");
-
-elementBaruHtml.href = `mailto:${alamatEmail}?subject=${subject}&body=hello geisss nama saya 
-${name} masukan anda terhadap president kita: ${tArea} anda memilih ${subject} WOW !!! \n
-ini no hp saya silahkan call ${nohp} INI KO SUBJECT NYA GADA YA GIMANA YA GESSSSSS ?????padahal udah di panggil`;
+elementBaruHtml.href="mailto:"+alamatEmail+"?subject="+subject+
+"&body=halo nama saya adalah "+name+" masukan anda terhadap president kita: "
++tArea+" dan jika mau menghubungi saya di: "+nohp+"terimakasih";
+//yang bawah copas yang atas pemahaman saya agar mengerti dan yap berhasil //
+// elementBaruHtml.href = `mailto:${alamatEmail}?subject=${subject}&body=hello geisss nama saya
+// ${name} masukan anda terhadap president kita: ${tArea} anda memilih ${subject} WOW !!! \n
+// ini no hp saya silahkan call ${nohp} INI KO SUBJECT NYA GADA YA GIMANA YA GESSSSSS ?????padahal udah di panggil`;
 
 elementBaruHtml.click();
 }
