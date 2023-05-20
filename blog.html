@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/blog.css">
+        <title>blog</title>
+    </head>
+    <body class="bodyForm"style="background-color:white">
+        <header>
+            <nav>
+                <img src="assets/logo.png"class="logo"/>
+                    <a href="blog.html"class="blog">Blog</a>
+                    <a href="index.html"class="act">My Project</a>
+                    <a href="contact.html"class="btn">contact me</a>
+            </nav>
+            </header>
+            <div class="container">
+                <div class="container-form">
+                    <h1>add my project</h1><br>
+                <form onsubmit="formBlog(event)"class="blog-form">
+                    <label for="f-name">Project Name<input type="text"id="f-name"></label><br><br>
+                    <pre><strong>Start Date</strong>                                                   <strong>End Date</strong></pre>
+                    <input type="date"id="f-date">
+                    <input type="date"id="f-end"><br><br>
+                    <label for="f-area"class="des">Description <textarea id="f-area" cols="10" rows="5"></textarea></label><br>
+                    <!-- checkbox -->
+                    <label for="f-cek">Technologies</label><br>
+                    <input type="checkbox"id="check">Microsoft
+                    <input type="checkbox"id="ce">X-Box <br>
+                    <input type="checkbox"id="kb">Playstation
+                    <input type="checkbox"id="ox">iPhone <br><br>
+                    <label for="fl">Upload image</label><br>
+                    <input type="file"class="file"required id="fl"/><img src="assets/file.png" alt="file"class="jpg"><br>
+                    <button type="button"class="f-submit"onclick="fungsiKedua()">submit</button>
+                </form>
+                </div>
+                <br><br><br><br>
+                <div class="content">
+                    <h1 class="child-h">MY PROJECT</h1>
+                    <hr class="hr">
+                    <br>
+                    <div class="container-blog">
+                        <a href="blog-detail.html"class="link-blog"><h3 class="h3">Mobile App</h3></a>
+                        <h6>duration:3 month</h6><br>
+                        <p class="paragraf">iPhone android Mobile App Lorem ipsum dolor, sit consectetur adipisicing elit. Tenetur.dolor sit ametdolor.adisuding sdhug amet </p>
+                        <img src="assets/gadget.jpg" alt="gadget"class="gadget"><br><br>
+                        <i class="ri-apple-fill"></i>
+                        <i class="ri-microsoft-fill"></i>
+                        <i class="ri-playstation-line"></i>
+                        <i class="ri-xbox-fill"></i>
+                        <br>
+                        <button class="e">edit</button>
+                        <button class="n">delete</button>
+                    </div>
+                    <div class="container-blog-2">
+                        <a href="blog-detail.html"class="link-blog"><h3 class="h3">X-Box</h3></a>
+                        <h6>duration:3 month</h6><br>
+                        <p class="paragraf">iPhone android Mobile App Lorem ipsum dolor, sit consectetur adipisicing elit. Tenetur.dolor sit ametdolor.adisuding sdhug amet </p>
+                        <img src="assets/xbox.jpg" alt="gadget"class="gadget"><br><br>
+                        <i class="ri-apple-fill"></i>
+                        <i class="ri-microsoft-fill"></i>
+                        <i class="ri-playstation-line"></i>
+                        <i class="ri-xbox-fill"></i>
+                        <br>
+                        <button class="e">edit</button>
+                        <button class="n">delete</button>
+                    </div>
+                    <div class="container-blog-3">
+                        <a href="blog-detail.html"class="link-blog"><h3 class="h3">Playstation</h3></a>
+                        <h6>duration:3 month</h6><br>
+                        <p class="paragraf">iPhone android Mobile App Lorem ipsum dolor, sit consectetur adipisicing elit. Tenetur.dolor sit ametdolor.adisuding sdhug amet </p>
+                        <img src="assets/ps.jpg" alt="gadget"class="gadget"><br><br>
+                        <i class="ri-apple-fill"></i>
+                        <i class="ri-microsoft-fill"></i>
+                        <i class="ri-playstation-line"></i>
+                        <i class="ri-xbox-fill"></i>
+                        <br>
+                        <button class="e">edit</button>
+                        <button class="n">delete</button>
+                    </div>
+                    <div class="container-blog-4">
+                        <a href="blog-detail.html"class="link-blog"><h3 class="h3">Microsoft</h3></a>
+                        <h6>duration:3 month</h6><br>
+                        <p class="paragraf">iPhone android Mobile App Lorem ipsum dolor, sit consectetur adipisicing elit. Tenetur.dolor sit ametdolor.adisuding sdhug amet </p>
+                        <img src="assets/ms.jpg" alt="gadget"class="gadget"><br><br>
+                        <i class="ri-apple-fill"></i>
+                        <i class="ri-microsoft-fill"></i>
+                        <i class="ri-playstation-line"></i>
+                        <i class="ri-xbox-fill"></i>
+                        <br>
+                        <button class="e">edit</button>
+                        <button class="n">delete</button>
+                    </div>
+                </div>
+            </div>
+            <script src="javascript/blog.js"></script>
+    </body>
+</html>
