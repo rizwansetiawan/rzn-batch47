@@ -21,7 +21,9 @@ a
         margin-left: 4vw;
         text-decoration: none;
         color: black;font-weight: bold;
+        transition: .5s;
     }
+/* .blog,.act:hover{text-shadow: 5px 0 5px rgba(51, 0, 255, 0.501);color:#f65217} */
 .btn
     {
         margin-left: 70vw;

@@ -1,3 +1,4 @@
+
 //pop up for user input //
 function fungsiKedua(){
     let name2 = document.getElementById('f-name').value;
@@ -5,7 +6,7 @@ function fungsiKedua(){
     let date2 = document.getElementById('f-end').value;
     let area2 = document.getElementById('f-area').value;
     let file  = document.getElementById('fl').value;
-
+    
 if(name2 == ''){
     return alert('Name is Required')
 }else if(date1 == ''){
@@ -24,7 +25,7 @@ let dataForm = [];
 
 //content for user input//
 function formBlog(event){
-event.preventDefault();
+event.preventDefault()
 
     let name2 = document.getElementById('f-name').value;
     let date1 = document.getElementById('f-date').value;
@@ -37,12 +38,12 @@ event.preventDefault();
     const playstation = '<i class="ri-playstation-line"></i>';
     const xBox = '<i class="ri-xbox-fill"></i>';
 
-    let putApple = document.getElementById('check').checked ? apple:'';
-    let putMicrosoft = document.getElementById('ce').checked ? microsoft:'';
-    let putPlaystation = document.getElementById('kb').checked ? playstation:'';
-    let putXBox = document.getElementById('ox').checked ? xBox:'';
+    let putApple = document.getElementById('check').checked ?microsoft :'';
+    let putMicrosoft = document.getElementById('ce').checked ?xBox :'';
+    let putPlaystation = document.getElementById('kb').checked ?playstation :'';
+    let putXBox = document.getElementById('ox').checked ?apple :'';
 
-    file = URL.createObjectURL(file[0]);
+    file = URL.createObjectURL(file[0])
     console.log(file)
 
 // ini membuat var bertipe object yang berisi data yang sudah di deklarasikan sebelumnya //
@@ -62,16 +63,17 @@ event.preventDefault();
     console.log(dataForm);
     
     //untuk mnegapply atau Render dari yang user masukan //
-    //nama render dan fungsi di samakan karena agar langsung di panngil namanya ya ngga sih ? ya kan? //hmm kurang paham yang ini euy
+    //nama render dan fungsi di samakan karena agar langsung di panngil fungsi nya //
     renderFungsi3();
 }
 function renderFungsi3(){
-    document.getElementsByClassName('container-blog')[0].innerHTML='';
+    document.getElementById('parent1').innerHTML='';
     //membuat perulangan agar konten yang ditampilkan bertambah ketika user mengklik tombol submit nya//
-    for(let pertambahan = 0;pertambahan < dataForm.length;pertambahan++){
-    document.getElementsByClassName('container-blog')[0].innerHTM+=`
-        <a href="blog-detail.html"class="link-blog"><h3 class="h3">${dataForm[index].name2}</h3></a>
-                        <h6>${dataForm[index].date1}-${dataForm[index].date2}</h6><br>
+    for(let index = 0;index < dataForm.length;index++){
+    document.getElementById('parent1').innerHTML+=`
+    <div class="container-blog-user">
+        <a href="blog-detail-user.html"class="link-blog"><h3 class="h3">${dataForm[index].name2}</h3></a>
+                        <h6>Date: ${dataForm[index].date1} | ${dataForm[index].date2}</h6><br>
                         <p class="paragraf">${dataForm[index].area2}</p>
                         <img src="${dataForm[index].file}" alt="gadget"class="gadget"><br><br>
                         ${dataForm[index].putApple}
@@ -80,7 +82,8 @@ function renderFungsi3(){
                         ${dataForm[index].putXBox}
                         <br>
                         <button class="e">edit</button>
-                        <button class="n">delete</button>`
-        
+                        <button class="n">delete</button>                
+        </div>`
     }
-}
+};
+

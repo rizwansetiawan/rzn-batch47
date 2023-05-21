@@ -9,20 +9,20 @@
         <header>
             <nav>
                 <img src="assets/logo.png"class="logo"/>
-                    <a href="blog.html"class="blog">Blog</a>
-                    <a href="index.html"class="act">My Project</a>
+                    <a href="blog.html"class="blog active">Blog</a>
+                    <a href="index.html"class="act active2">My Project</a>
                     <a href="contact.html"class="btn">contact me</a>
             </nav>
             </header>
             <div class="container">
                 <div class="container-form">
-                    <h1>add my project</h1><br>
+                    <h1>Add Your Project</h1><br>
                 <form onsubmit="formBlog(event)"class="blog-form">
-                    <label for="f-name">Project Name<input type="text"id="f-name"></label><br><br>
+                    <label for="f-name">Project Name<input type="text"required id="f-name"placeholder="Your Project"></label><br><br>
                     <pre><strong>Start Date</strong>                                                   <strong>End Date</strong></pre>
-                    <input type="date"id="f-date">
-                    <input type="date"id="f-end"><br><br>
-                    <label for="f-area"class="des">Description <textarea id="f-area" cols="10" rows="5"></textarea></label><br>
+                    <input type="date"id="f-date"required>
+                    <input type="date"id="f-end"required><br><br>
+                    <label for="f-area"class="des">Description <textarea maxlength="130" required id="f-area" cols="10" rows="5"placeholder="Your Description..."></textarea></label><br>
                     <!-- checkbox -->
                     <label for="f-cek">Technologies</label><br>
                     <input type="checkbox"id="check">Microsoft
@@ -31,16 +31,17 @@
                     <input type="checkbox"id="ox">iPhone <br><br>
                     <label for="fl">Upload image</label><br>
                     <input type="file"class="file"required id="fl"/><img src="assets/file.png" alt="file"class="jpg"><br>
-                    <button type="button"class="f-submit"onclick="fungsiKedua()">submit</button>
+                    <button type="submit"onclick="fungsiKedua()"class="f-submit">submit</button>
                 </form>
                 </div>
                 <br><br><br><br>
                 <div class="content">
-                    <h1 class="child-h">MY PROJECT</h1>
+                    <h1 class="child-h">PROJECT</h1>
                     <hr class="hr">
                     <br>
+                    <div id="parent1">
                     <div class="container-blog">
-                        <a href="blog-detail.html"class="link-blog"><h3 class="h3">Mobile App</h3></a>
+                        <a href="mobile-detail.html"class="link-blog"><h3 onclick="userBlog()" class="h3">Mobile Phone</h3></a>
                         <h6>duration:3 month</h6><br>
                         <p class="paragraf">iPhone android Mobile App Lorem ipsum dolor, sit consectetur adipisicing elit. Tenetur.dolor sit ametdolor.adisuding sdhug amet </p>
                         <img src="assets/gadget.jpg" alt="gadget"class="gadget"><br><br>
@@ -53,7 +54,7 @@
                         <button class="n">delete</button>
                     </div>
                     <div class="container-blog-2">
-                        <a href="blog-detail.html"class="link-blog"><h3 class="h3">X-Box</h3></a>
+                        <a href="xbox-detail.html"class="link-blog"><h3 class="h3">X-Box</h3></a>
                         <h6>duration:3 month</h6><br>
                         <p class="paragraf">iPhone android Mobile App Lorem ipsum dolor, sit consectetur adipisicing elit. Tenetur.dolor sit ametdolor.adisuding sdhug amet </p>
                         <img src="assets/xbox.jpg" alt="gadget"class="gadget"><br><br>
@@ -79,7 +80,7 @@
                         <button class="n">delete</button>
                     </div>
                     <div class="container-blog-4">
-                        <a href="blog-detail.html"class="link-blog"><h3 class="h3">Microsoft</h3></a>
+                        <a href="ms-detail.html"class="link-blog"><h3 class="h3">Microsoft</h3></a>
                         <h6>duration:3 month</h6><br>
                         <p class="paragraf">iPhone android Mobile App Lorem ipsum dolor, sit consectetur adipisicing elit. Tenetur.dolor sit ametdolor.adisuding sdhug amet </p>
                         <img src="assets/ms.jpg" alt="gadget"class="gadget"><br><br>
@@ -92,6 +93,7 @@
                         <button class="n">delete</button>
                     </div>
                 </div>
+            </div>
             </div>
             <script src="javascript/blog.js"></script>
     </body>
