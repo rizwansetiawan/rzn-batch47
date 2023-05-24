@@ -1,12 +1,12 @@
 *{margin: 0;padding: 0;box-sizing: border-box;}
+body{background-color: rgb(201, 201, 201);;}
 .active{color: #f65217;}
 
-.container{width: 100%;height: 85%;background-color: rgb(187, 187, 187);}
+.container{width: 100%;height: 85%;background-color: rgb(201, 201, 201);}
 .container-form
     {
-        width: 40%;height: 85%;
-        border: 1px solid transparent;
-        /* box-shadow: 0 10px 10px 1px rgba(51, 0, 255, 0.501); */
+        width: 40%;
+        height:100%;
         margin:0 auto;position: relative;
         background-color: transparent;
     }
@@ -17,26 +17,37 @@
     {
         width: 100%;
         height: 4vh;
+        padding: 15px 0 15px 10px;
+        border-radius:10px;
+        border-color: transparent;
         
     }
     #f-date
     {
         width: 48%;
-        outline: none;
+        border-radius: 8px;
+        padding: 5px 2px;
+        border-color: transparent;
         }
         #f-end
         {
             margin-left: 50%;
             margin-top: -25px;
-            width: 50%;
+            width: 50%;border-radius: 8px;
+            border-color: transparent;
+            padding: 5px 2px;position: absolute;
+            left: 0;top: 222px;
         }
+        #fl{border-radius: 10px;
+            padding: 5px 5px;}
 #check,#ce,#kb,#ox
     {
-        margin-right: 10px;margin-top: 10px;
+        margin-right: 10px;margin-top: 10px;border-color: transparent;
     }
 #ce,#ox{margin-left: 90px;}
 #ox{margin-left: 76.2px;}
 .h3:hover{color: #f65217;}
+#parent1{height: 150%;width: 100%;background-color: whitesmoke;}
 
 .file
     {
@@ -47,15 +58,15 @@
 
 .jpg
     {
-        position: absolute;top: 535px;right: 0px;
-        transform: rotate(40deg);width: 20px;
+        position: absolute;top: 552px;right: 10px;
+        transform: rotate(40deg);width: 22px;
     }
 .f-submit
     {
         background-color: #f65217;
         color: white;
         margin-left: 86%;
-        padding: 2px 20px;
+        padding: 5px 20px;
         border-radius: 10px;
         border: none;
         margin-top: 20px;
@@ -63,22 +74,67 @@
         cursor: pointer;
         box-shadow: 0 2px 8px 1px rgba(51, 0, 255, 0.501);
         transition: .5s;
+        margin-top: 40px;
     }
 .f-submit:hover{background-color: black;color: white;}
     .link-blog{background-color: black;}
     .paragraf{text-align:left;font-size:12px;font-weight: bold;}
-    .content{
-        height: 750px;
-        background-image: linear-gradient(rgba(181, 181, 181, 0.532),rgba(51, 0, 255, 0.501));}
+    .content{margin-top: 100px;
+        height: 750px;background-color: whitesmoke}
+        /* background-image: linear-gradient(rgba(181, 181, 181, 0.532),rgba(51, 0, 255, 0.501));} */
     .hr{width: 80%;margin: 0 auto;}
     .child-h{margin-top: -25px;}
     .h3{margin: 5px 0 5px 0;}
-    h6{color: #f65217;}
+    h6{color: #000000;}
     .container-blog,.container-blog-2,.container-blog-3,.container-blog-4
         {
-            width: 280px;height: 470px;background-color: rgb(255, 255, 255);border-radius: 10px;
-            margin-left: 100px;border: 1px solid transparent;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.454);
+            width: 450px;height: 520px;background-color: rgb(255, 255, 255);border-radius: 10px;box-sizing: border-box;
+            margin-left: 60px;border: 1px solid transparent;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.454);position: relative;
         }
+        .card{width: 95%;height: 95%;background-color: transparent;
+            margin: 10px auto;box-sizing: border-box;}
+    .paragraf{font-size: 1vw;text-align: left;}
+    .icon{position: absolute;top: 440px;left: 15px;}
+    .icon-user{position: absolute;top: 410px;left: 10px;}
+
+
+        .gadget{width:100%;height: 250px;
+        border-radius: 10px;}
+        .ri-apple-fill{font-size: 20px;}
+        .ri-microsoft-fill{font-size: 20px;margin-left: 20px;}
+        .ri-playstation-line{font-size: 20px;margin-left: 20px;}
+        .ri-xbox-fill{font-size: 20px;margin-left: 20px;}
+        .e,.n
+            {
+                background-color: #f65217;color: rgb(255, 255, 255);
+                border-radius: 5px;padding: 5px 25px;
+                font-weight: bold;border: none;display: inline-block;
+                margin-left: 10px;cursor: pointer;margin-top: 0;
+                margin-top: 60px;width: 45%;
+            }
+            .e{padding: 5px 48px;margin-left: 2px;background-color:transparent;color: rgb(255, 255, 255);border: 1px solid transparent;}
+            .n{margin-left: 30px;padding: 5px 30px;}
+            .e,.n:hover{background-color: black;}
+            .e:hover{background-color: #f65217;}
+            .card2{margin-left: 480px;margin-top: -510px;}
+            .card3{margin-left: 960px;margin-top: -520px;}
+            .card4{margin-left: 0;margin-top: 40px;}
+            .card5{margin-left: 480px;margin-top: -520px;}
+            .card-user{display: inline-block;margin-left: 40px;margin-top: 30px;}
+            .date-time{position: absolute;right: 20px;top: 85%;}
+    /* .container-blog-2{margin:-470px 0 0 1130px;} */
+    /* .container-blog-3{margin:-470px 0 0 440px;}
+    .container-blog-4{margin:-470px 0 0 780px;position: relative;} */
+
+    /* STYLING DETAIL-BLOG */
+    .child-blog{margin-left: 800px;margin-top: -350px;line-height: 50px;}
+     /* .detail-blog{position: relative;} */
+    .Playstation{height: 380px;margin-left: 100px;margin-top: 100px;} 
+    .p-detail{text-align: justify;margin-left: 100px;}
+    /*experiment 😁*/
+    input[type="text"]{color: rgb(0, 0, 0);outline-width: thick;}
+    input[type="date"]#f-date,#f-end{outline-color:#f65217}
+
     .container-blog-user{
         width: 280px;height: 470px;
         background-color: rgb(255, 255, 255);
@@ -91,35 +147,3 @@
         /* position: relative; */
 
     }
-    .paragraf{font-size: .7vw;}
-
-
-        .gadget{width: 280px;height: 200px;}
-        .ri-apple-fill{font-size: 30px;}
-        .ri-microsoft-fill{font-size: 30px;margin-left: 20px;}
-        .ri-playstation-line{font-size: 30px;margin-left: 20px;}
-        .ri-xbox-fill{font-size: 30px;margin-left: 20px;}
-        .e,.n
-            {
-                background-color: #f65217;color: rgb(255, 255, 255);
-                border-radius: 5px;padding: 5px 15px;
-                font-weight: bold;border: none;display: inline-block;
-                margin-left: 10px;cursor: pointer;margin-top: 5px;
-                margin-top: 30px;
-            }
-            .e{padding: 5px 48px;margin-left: 2px;background-color:transparent;color: rgb(255, 255, 255);border: 1px solid transparent;}
-            .n{margin-left: 25px;padding: 5px 40px;}
-            .e,.n:hover{background-color: black;}
-            .e:hover{background-color: #f65217;}
-    .container-blog-2{margin:-470px 0 0 1130px;}
-    .container-blog-3{margin:-470px 0 0 440px;}
-    .container-blog-4{margin:-470px 0 0 780px;position: relative;}
-
-    /* STYLING DETAIL-BLOG */
-    .child-blog{margin-left: 800px;margin-top: -350px;line-height: 50px;}
-     /* .detail-blog{position: relative;} */
-    .Playstation{height: 380px;margin-left: 100px;margin-top: 100px;} 
-    .p-detail{text-align: justify;margin-left: 100px;}
-    /*experiment 😁*/
-    input[type="text"]{color: rgb(0, 0, 0);outline-width: thick;}
-    input[type="date"]#f-date,#f-end{outline-color:#f65217}

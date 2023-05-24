@@ -5,12 +5,13 @@
         <link rel="stylesheet" href="css/blog.css">
         <title>blog</title>
     </head>
-    <body class="bodyForm"style="background-color:white">
+    <body>
         <header>
             <nav>
                 <img src="assets/logo.png"class="logo"/>
-                    <a href="blog.html"class="blog active">Blog</a>
-                    <a href="index.html"class="act active2">My Project</a>
+                <a href="index.html"class="act active2">Home</a>
+                    <a href="blog.html"class="blog active">Project</a>
+                    
                     <a href="contact.html"class="btn">contact me</a>
             </nav>
             </header>
@@ -31,66 +32,109 @@
                     <input type="checkbox"id="ox">iPhone <br><br>
                     <label for="fl">Upload image</label><br>
                     <input type="file"class="file"required id="fl"/><img src="assets/file.png" alt="file"class="jpg"><br>
-                    <button type="submit"onclick="fungsiKedua()"class="f-submit">submit</button>
+                    <button type="submit"onclick="formUser()"class="f-submit">submit</button>
                 </form>
                 </div>
-                <br><br><br><br>
+                <!-- <br><br><br><br> -->
                 <div class="content">
                     <h1 class="child-h">PROJECT</h1>
                     <hr class="hr">
                     <br>
                     <div id="parent1">
                     <div class="container-blog">
-                        <a href="mobile-detail.html"class="link-blog"><h3 onclick="userBlog()" class="h3">Mobile Phone</h3></a>
-                        <h6>duration:3 month</h6><br>
-                        <p class="paragraf">iPhone android Mobile App Lorem ipsum dolor, sit consectetur adipisicing elit. Tenetur.dolor sit ametdolor.adisuding sdhug amet </p>
-                        <img src="assets/gadget.jpg" alt="gadget"class="gadget"><br><br>
+                        <div class="card">
+                        <img src="assets/img2.png" alt="gadget"class="gadget">
+                        <a href="mobile-detail.html"class="link-blog">
+                        <h3 onclick="userBlog()" class="h3">Dumbways Mobile App-2021</h3></a>
+                        <h6>Durasi 3 bulan </h6><br>
+                        <p class="paragraf">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download </p>
+                        <br>
+                        <div class="icon">
                         <i class="ri-apple-fill"></i>
                         <i class="ri-microsoft-fill"></i>
                         <i class="ri-playstation-line"></i>
-                        <i class="ri-xbox-fill"></i>
-                        <br>
+                        <i class="ri-xbox-fill"></i> 
+                    </div>
+                    <small class="date-time"> 2 Minute Ago</small>
                         <button class="e">edit</button>
                         <button class="n">delete</button>
                     </div>
-                    <div class="container-blog-2">
-                        <a href="xbox-detail.html"class="link-blog"><h3 class="h3">X-Box</h3></a>
-                        <h6>duration:3 month</h6><br>
-                        <p class="paragraf">iPhone android Mobile App Lorem ipsum dolor, sit consectetur adipisicing elit. Tenetur.dolor sit ametdolor.adisuding sdhug amet </p>
-                        <img src="assets/xbox.jpg" alt="gadget"class="gadget"><br><br>
+                    
+                    <div class="container-blog card2">
+                        <div class="card">
+                        <img src="assets/img3.png" alt="gadget"class="gadget">
+                        <a href="mobile-detail.html"class="link-blog">
+                        <h3 onclick="userBlog()" class="h3">Dumbways Mobile App-2021</h3></a>
+                        <h6>Durasi 3 bulan </h6><br>
+                        <p class="paragraf">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download </p>
+                        <br>
+                        <div class="icon">
                         <i class="ri-apple-fill"></i>
                         <i class="ri-microsoft-fill"></i>
                         <i class="ri-playstation-line"></i>
                         <i class="ri-xbox-fill"></i>
-                        <br>
+                    </div>
                         <button class="e">edit</button>
                         <button class="n">delete</button>
                     </div>
-                    <div class="container-blog-3">
-                        <a href="blog-detail.html"class="link-blog"><h3 class="h3">Playstation</h3></a>
-                        <h6>duration:3 month</h6><br>
-                        <p class="paragraf">iPhone android Mobile App Lorem ipsum dolor, sit consectetur adipisicing elit. Tenetur.dolor sit ametdolor.adisuding sdhug amet </p>
-                        <img src="assets/ps.jpg" alt="gadget"class="gadget"><br><br>
+                    </div>
+
+                    <div class="container-blog card3">
+                        <div class="card">
+                        <img src="assets/img4.png" alt="gadget"class="gadget">
+                        <a href="mobile-detail.html"class="link-blog">
+                        <h3 onclick="userBlog()" class="h3">Dumbways Mobile App-2021</h3></a>
+                        <h6>Durasi 3 bulan </h6><br>
+                        <p class="paragraf">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download </p>
+                        <br>
+                        <div class="icon">
                         <i class="ri-apple-fill"></i>
                         <i class="ri-microsoft-fill"></i>
                         <i class="ri-playstation-line"></i>
                         <i class="ri-xbox-fill"></i>
-                        <br>
+                    </div>
                         <button class="e">edit</button>
                         <button class="n">delete</button>
                     </div>
-                    <div class="container-blog-4">
-                        <a href="ms-detail.html"class="link-blog"><h3 class="h3">Microsoft</h3></a>
-                        <h6>duration:3 month</h6><br>
-                        <p class="paragraf">iPhone android Mobile App Lorem ipsum dolor, sit consectetur adipisicing elit. Tenetur.dolor sit ametdolor.adisuding sdhug amet </p>
-                        <img src="assets/ms.jpg" alt="gadget"class="gadget"><br><br>
+                    </div>
+
+                    <div class="container-blog card4">
+                        <div class="card">
+                        <img src="assets/img4.png" alt="gadget"class="gadget">
+                        <a href="mobile-detail.html"class="link-blog">
+                        <h3 onclick="userBlog()" class="h3">Dumbways Mobile App-2021</h3></a>
+                        <h6>Durasi 3 bulan </h6><br>
+                        <p class="paragraf">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download </p>
+                        <br>
+                        <div class="icon">
                         <i class="ri-apple-fill"></i>
                         <i class="ri-microsoft-fill"></i>
                         <i class="ri-playstation-line"></i>
                         <i class="ri-xbox-fill"></i>
-                        <br>
+                    </div>
                         <button class="e">edit</button>
                         <button class="n">delete</button>
+                    </div>
+                    </div>
+
+                    <div class="container-blog card5">
+                        <div class="card">
+                        <img src="assets/img2.png" alt="gadget"class="gadget">
+                        <a href="mobile-detail.html"class="link-blog">
+                        <h3 onclick="userBlog()" class="h3">Dumbways Mobile App-2021</h3></a>
+                        <h6>Durasi 3 bulan </h6><br>
+                        <p class="paragraf">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download </p>
+                        <br>
+                        <div class="icon">
+                        <i class="ri-apple-fill"></i>
+                        <i class="ri-microsoft-fill"></i>
+                        <i class="ri-playstation-line"></i>
+                        <i class="ri-xbox-fill"></i>
+                    </div>
+                        <button class="e">edit</button>
+                        <button class="n">delete</button>
+                    </div>
+                    </div>
                     </div>
                 </div>
             </div>
