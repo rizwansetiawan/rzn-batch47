@@ -1,11 +1,29 @@
+//condistion for hamburger menu navigation //
+let clickIcon = document.getElementById('burgerMenu');
+let burgerMenu = document.getElementById('containerHamburger');
+let containerProject = document.getElementById('firstContainerBlog');
+let clickMe = 0;
+function menuBars (){
+    if(clickMe==0){
+        burgerMenu.style.display='block';
+        containerProject.style.transition='.8s'
+        containerProject.style.marginTop='200px';
+        
+        clickMe=1;
+    }else{burgerMenu.style.display='none';
+        containerProject.style.marginTop='0';
+        containerProject.style.transition='1s'
+        clickMe=0;
 
-//pop up for user input //
+}
+}
+//pop up for user input & validation //
 function formUser(){
-    let name2 = document.getElementById('f-name').value;
+    let name2 = document.getElementById('name2').value;
     let date1 = document.getElementById('f-date').value;
     let date2 = document.getElementById('f-end').value;
     let area2 = document.getElementById('f-area').value;
-    let file  = document.getElementById('fl').value;
+    let file  = document.getElementById('file').value;
     
     
 if(name2 == ''){
@@ -21,6 +39,9 @@ if(name2 == ''){
 }
 };
 
+// let remove = document.getElementById('containerCard2');
+
+
 //untuk menyimpan data yang sudah di pilih //
 let dataForm = [];
 
@@ -28,35 +49,39 @@ let dataForm = [];
 function formBlog(event){
 event.preventDefault()
 
-    let name2 = document.getElementById('f-name').value;
+    let name2 = document.getElementById('name2').value;
     let takeDate1 = document.getElementById('f-date').value;
     let takeDate2 = document.getElementById('f-end').value;
     let area2 = document.getElementById('f-area').value;
-    let file  = document.getElementById('fl').files;
+    let file  = document.getElementById('file').files;
 
     const apple = '<i class="ri-apple-fill"></i>';
     const microsoft = '<i class="ri-microsoft-fill"></i>';
     const playstation = '<i class="ri-playstation-line"></i>';
     const xBox = '<i class="ri-xbox-fill"></i>';
 
-    let putMicrosoft = document.getElementById('check').checked ?microsoft :'';
-    let putXBox = document.getElementById('ce').checked ?xBox :'';
-    let putPlaystation = document.getElementById('kb').checked ?playstation :'';
-    let putApple = document.getElementById('ox').checked ?apple :'';
+    let putMicrosoft = document.getElementById('ms').checked ?microsoft :'';
+    let putXBox = document.getElementById('xb').checked ?xBox :'';
+    let putPlaystation = document.getElementById('ps').checked ?playstation :'';
+    let putApple = document.getElementById('ip').checked ?apple :'';
 
-    file = URL.createObjectURL(file[0])
-    console.log(file);
+    file = URL.createObjectURL(file[0]);
+    console.log(file)
 
     function timePost (){
         let dateOne = new Date(document.getElementById('f-date').value);
         let dateTwo = new Date(document.getElementById('f-end').value);
         let forDate = new Date (dateTwo) - new Date (dateOne);
-
+        // console.log(dateOne-dateTwo);
         //PR //
+        // alur cara memhitung durasi per post nya//
+        // 1 detik = 1000 mili // 1 jam 3600 dan 1 hari 24 jam //dan 1 bulan 30 hari //dan 1 tahun 12 bulan
         let days = Math.floor(forDate/(1000*3600*24));
         let weeks = Math.floor(forDate/(1000*3600*24*7));
         let months = Math.floor(forDate/(1000*3600*24*30));
         let years = Math.floor(forDate/(1000*3600*24*30*12));
+        // let result = days+weeks+months+years;
+        // console.log('hasil dari ='+Math.ceil(forDate/result))
     
         if (years == 1 || years > 0) {
             return `${years} Tahun` 
@@ -91,25 +116,28 @@ event.preventDefault()
 }
 function renderBlog(){
     document.getElementById('parent1').innerHTML='';
+    document.getElementById('parent2').innerHTML='';
     //membuat perulangan agar konten yang ditampilkan bertambah ketika user mengklik tombol submit nya//
     for(let index = 0;index < dataForm.length;index++){
     document.getElementById('parent1').innerHTML+=`
-    <div class="container-blog card-user">
-    <div class="card">
-    <img src="${dataForm[index].file}" alt="gadget"class="gadget">
-    <a href="mobile-detail.html"class="link-blog">
-    <h3 onclick="userBlog()" class="h3">${dataForm[index].name2}</h3></a>
-    <h6>Durasi: ${dataForm[index].postUpdate}</h6><br>
-    <p class="paragraf">${dataForm[index].area2}</p>
-    <br>
-    <div class="icon-user">
-   ${dataForm[index].putMicrosoft}
-   ${dataForm[index].putXBox}
-   ${dataForm[index].putPlaystation}
-   ${dataForm[index].putApple}
-</div>
-    <button class="e">edit</button>
-    <button class="n">delete</button>
+    <div class="card1">
+                    <div class="align-card1">
+                       <img src="${dataForm[index].file} alt=""class="ft-card1"/>
+                       <a href="blog.html"><h3>${dataForm[index].name2}</h3></a>
+                       <p class="p-card-duration">Durasi:${dataForm[index].postUpdate}</p>
+                       <p class="p-card">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download</p>
+                    <div class="icon">
+                    ${dataForm[index].putMicrosoft}
+                    ${dataForm[index].putXBox}
+                    ${dataForm[index].putPlaystation}
+                    ${dataForm[index].putApple}
+                    </div>
+                        <div class="container-btn">
+                            <button class="btn-card1">Edit</button>
+                            <button class="btn-card2">Delete</button>
+                    </div>
+                </div>
+                </div>
 </div>`
     }
 };

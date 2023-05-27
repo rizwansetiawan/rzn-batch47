@@ -1,4 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
         <link rel="stylesheet" href="css/contact.css">
@@ -7,138 +11,172 @@
     </head>
     <body>
         <header>
-            <nav>
+            <nav class="navbarscontact">
                 <img src="assets/logo.png"class="logo"/>
-                <a href="index.html"class="act active2">Home</a>
-                    <a href="blog.html"class="blog active">Project</a>
-                    
-                    <a href="contact.html"class="btn">contact me</a>
+                <i onclick="menuBars()"class="ri-menu-line"id="burgerMenu"></i>
+                <a href="index.html"class="act">Home</a>
+                <a href="blog.html"class="blog blog-active">Project</a>
+                <a href="testimonials.html"class="blog2">Testimonials</a>
+                <a href="contact.html"class="btnNav">Contact Me</a>
+                <div class="hamburger"id="containerHamburger">
+                    <ul class="ulresponsive"id="ulResponsive">
+                        <li><a href="index.html"class="r-first"id="firstMenu">Home</a></li>
+                        <li><a href="blog.html"class="r-second"id="firstMenu2">Project</a></li>
+                        <a href="testimonials.html"class="r-third"id="firstMenu4">Testimonials</a>
+                        <li><a href="contact.html"class="r-btn"id="firstMenu3">Contact Me</a></ul></li>
+                    </ul>
+                </div>
             </nav>
             </header>
-            <div class="container">
-                <div class="container-form">
-                    <h1>Add Your Project</h1><br>
-                <form onsubmit="formBlog(event)"class="blog-form">
-                    <label for="f-name">Project Name<input type="text"required id="f-name"placeholder="Your Project"></label><br><br>
-                    <pre><strong>Start Date</strong>                                                   <strong>End Date</strong></pre>
-                    <input type="date"id="f-date"required>
-                    <input type="date"id="f-end"required><br><br>
-                    <label for="f-area"class="des">Description <textarea maxlength="130" required id="f-area" cols="10" rows="5"placeholder="Your Description..."></textarea></label><br>
-                    <!-- checkbox -->
-                    <label for="f-cek">Technologies</label><br>
-                    <input type="checkbox"id="check">Microsoft
-                    <input type="checkbox"id="ce">X-Box <br>
-                    <input type="checkbox"id="kb">Playstation
-                    <input type="checkbox"id="ox">iPhone <br><br>
-                    <label for="fl">Upload image</label><br>
-                    <input type="file"class="file"required id="fl"/><img src="assets/file.png" alt="file"class="jpg"><br>
+            <body>
+            <div class="project-container"id="firstContainerBlog">
+                <h1 class="project-h1">Add Project</h1>
+                <form onsubmit="formBlog(event)"class="form-user">
+                    <div class="name2">
+                        <label >Add Project
+                            <input type="text"id="name2"class="name-form"required/>
+                        </label>
+                    </div>
+                    <div class="f-date-container"id="startEnd">
+                        <label>Start Date
+                            <input type="date"id="f-date"required/>
+                        </label>
+                     <!-- </div> 
+                    <div class="f-end"> -->
+                        <label><bold>End Date</bold> <br>
+                        <input type="date"id="f-end"id="r-end"required/>
+                        </label> 
+                    </div>
+                    <div class="f-area">
+                        <label>Description
+                            <textarea cols="10" rows="5" id="f-area"required/></textarea>
+                        </label>
+                    </div> 
+                    <div class="tech">
+                        <label id="checkbox">Technologies
+                            <div>
+                               <input type="checkbox"id="ms"id="tech"> Microsoft
+                               
+                               <input type="checkbox"class="iphone"id="ip"> iPhone
+                            </div>
+                            <div>
+                               <input type="checkbox"id="ps"> Playstation
+                            
+                               <input type="checkbox"class="xbox"id="xb"> X-Box
+                            </div>
+                        </label>
+                    </div>
+                    <!-- <label></label> -->
+                    <div class="file"id="user-file">
+                        <img src="assets/file.png"class="logo-file"alt="your photo"/>
+                        <input type="file"class="fl-image"id="file"required/>
+                    </div>
                     <button type="submit"onclick="formUser()"class="f-submit">submit</button>
                 </form>
-                </div>
-                <!-- <br><br><br><br> -->
-                <div class="content">
-                    <h1 class="child-h">PROJECT</h1>
-                    <hr class="hr">
-                    <br>
-                    <div id="parent1">
-                    <div class="container-blog">
-                        <div class="card">
-                        <img src="assets/img2.png" alt="gadget"class="gadget">
-                        <a href="mobile-detail.html"class="link-blog">
-                        <h3 onclick="userBlog()" class="h3">Dumbways Mobile App-2021</h3></a>
-                        <h6>Durasi 3 bulan </h6><br>
-                        <p class="paragraf">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download </p>
-                        <br>
-                        <div class="icon">
-                        <i class="ri-apple-fill"></i>
-                        <i class="ri-microsoft-fill"></i>
-                        <i class="ri-playstation-line"></i>
-                        <i class="ri-xbox-fill"></i> 
+            </div>
+            <hr>
+            <!-- CARD -->
+            <h1 class="cardh1">MY PROJECT</h1>
+        <div class="container-card"id="parent1">
+                <div class="card1">
+                    <div class="align-card1">
+                       <img src="assets/img2.png" alt=""class="ft-card1"/>
+                       <a href="blog.html"><h3>Dumbways Mobile App</h3></a>
+                       <p class="p-card-duration">Durasi:3 Bulan</p>
+                       <p class="p-card">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download</p>
+                    <div class="icon">
+                       <i class="ri-xbox-fill"></i>
+                       <i class="ri-apple-fill"></i>
+                       <i class="ri-microsoft-fill"></i>
+                       <i class="ri-playstation-fill"></i>
                     </div>
-                    <small class="date-time"> 2 Minute Ago</small>
-                        <button class="e">edit</button>
-                        <button class="n">delete</button>
-                    </div>
-                    
-                    <div class="container-blog card2">
-                        <div class="card">
-                        <img src="assets/img3.png" alt="gadget"class="gadget">
-                        <a href="mobile-detail.html"class="link-blog">
-                        <h3 onclick="userBlog()" class="h3">Dumbways Mobile App-2021</h3></a>
-                        <h6>Durasi 3 bulan </h6><br>
-                        <p class="paragraf">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download </p>
-                        <br>
-                        <div class="icon">
-                        <i class="ri-apple-fill"></i>
-                        <i class="ri-microsoft-fill"></i>
-                        <i class="ri-playstation-line"></i>
-                        <i class="ri-xbox-fill"></i>
-                    </div>
-                        <button class="e">edit</button>
-                        <button class="n">delete</button>
-                    </div>
-                    </div>
-
-                    <div class="container-blog card3">
-                        <div class="card">
-                        <img src="assets/img4.png" alt="gadget"class="gadget">
-                        <a href="mobile-detail.html"class="link-blog">
-                        <h3 onclick="userBlog()" class="h3">Dumbways Mobile App-2021</h3></a>
-                        <h6>Durasi 3 bulan </h6><br>
-                        <p class="paragraf">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download </p>
-                        <br>
-                        <div class="icon">
-                        <i class="ri-apple-fill"></i>
-                        <i class="ri-microsoft-fill"></i>
-                        <i class="ri-playstation-line"></i>
-                        <i class="ri-xbox-fill"></i>
-                    </div>
-                        <button class="e">edit</button>
-                        <button class="n">delete</button>
-                    </div>
-                    </div>
-
-                    <div class="container-blog card4">
-                        <div class="card">
-                        <img src="assets/img4.png" alt="gadget"class="gadget">
-                        <a href="mobile-detail.html"class="link-blog">
-                        <h3 onclick="userBlog()" class="h3">Dumbways Mobile App-2021</h3></a>
-                        <h6>Durasi 3 bulan </h6><br>
-                        <p class="paragraf">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download </p>
-                        <br>
-                        <div class="icon">
-                        <i class="ri-apple-fill"></i>
-                        <i class="ri-microsoft-fill"></i>
-                        <i class="ri-playstation-line"></i>
-                        <i class="ri-xbox-fill"></i>
-                    </div>
-                        <button class="e">edit</button>
-                        <button class="n">delete</button>
-                    </div>
-                    </div>
-
-                    <div class="container-blog card5">
-                        <div class="card">
-                        <img src="assets/img2.png" alt="gadget"class="gadget">
-                        <a href="mobile-detail.html"class="link-blog">
-                        <h3 onclick="userBlog()" class="h3">Dumbways Mobile App-2021</h3></a>
-                        <h6>Durasi 3 bulan </h6><br>
-                        <p class="paragraf">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download </p>
-                        <br>
-                        <div class="icon">
-                        <i class="ri-apple-fill"></i>
-                        <i class="ri-microsoft-fill"></i>
-                        <i class="ri-playstation-line"></i>
-                        <i class="ri-xbox-fill"></i>
-                    </div>
-                        <button class="e">edit</button>
-                        <button class="n">delete</button>
-                    </div>
-                    </div>
+                        <div class="container-btn"id="containerButton">
+                            <button class="btn-card1">Edit</button>
+                            <button class="btn-card2">Delete</button>
                     </div>
                 </div>
             </div>
-            </div>
+                <div class="card2">
+                    <div class="align-card1">
+                        <img src="assets/ps.jpg" alt=""class="ft-card1"id="ftCard1"/>
+                        <a href="blog.html"><h3>Dumbways Mobile App</h3></a>
+                        <p class="p-card-duration">Durasi:3 Bulan</p>
+                        <p class="p-card">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download</p>
+                     <div class="icon">
+                        <i class="ri-xbox-fill"></i>
+                        <i class="ri-apple-fill"></i>
+                        <i class="ri-microsoft-fill"></i>
+                        <i class="ri-playstation-fill"></i>
+                     </div>
+                         <div class="container-btn"id="containerButton">
+                             <button class="btn-card1">Edit</button>
+                             <button class="btn-card2">Delete</button>
+                     </div>
+                 </div>
+                </div>
+                <div class="card3">
+                    <div class="align-card1">
+                        <img src="assets/img4.png" alt=""class="ft-card1"/>
+                        <a href="blog.html"><h3>Dumbways Mobile App</h3></a>
+                        <p class="p-card-duration">Durasi:3 Bulan</p>
+                        <p class="p-card">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download</p>
+                     <div class="icon">
+                        <i class="ri-xbox-fill"></i>
+                        <i class="ri-apple-fill"></i>
+                        <i class="ri-microsoft-fill"></i>
+                        <i class="ri-playstation-fill"></i>
+                     </div>
+                         <div class="container-btn"id="containerButton">
+                             <button class="btn-card1">Edit</button>
+                             <button class="btn-card2">Delete</button>
+                     </div>
+                 </div>
+                </div>
+        </div>
+
+        <div class="container-card2"id="parent2">
+                <div class="card4">
+                    <div class="align-card1">
+                        <img src="assets/img4.png" alt=""class="ft-card1"/>
+                        <a href="blog.html"><h3>Dumbways Mobile App</h3></a>
+                        <p class="p-card-duration">Durasi:3 Bulan</p>
+                        <p class="p-card">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download</p>
+                     <div class="icon">
+                        <i class="ri-xbox-fill"></i>
+                        <i class="ri-apple-fill"></i>
+                        <i class="ri-microsoft-fill"></i>
+                        <i class="ri-playstation-fill"></i>
+                     </div>
+                         <div class="container-btn"id="containerButton">
+                             <button class="btn-card1">Edit</button>
+                             <button class="btn-card2">Delete</button>
+                     </div>
+                 </div>
+                </div>
+                <div class="card5">
+                    <div class="align-card1">
+                        <img src="assets/ms.jpg" alt=""class="ft-card1"/>
+                        <a href="blog.html"><h3>Dumbways Mobile App</h3></a>
+                        <p class="p-card-duration">Durasi:3 Bulan</p>
+                        <p class="p-card">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download</p>
+                     <div class="icon">
+                        <i class="ri-xbox-fill"></i>
+                        <i class="ri-apple-fill"></i>
+                        <i class="ri-microsoft-fill"></i>
+                        <i class="ri-playstation-fill"></i>
+                     </div>
+                         <div class="container-btn"id="containerButton">
+                             <button class="btn-card1">Edit</button>
+                             <button class="btn-card2">Delete</button>
+                     </div>
+                 </div>
+                </div>
+                <div class="card6">
+
+                </div>
+        </div>
+            <!-- <script src="javascript/hofCallback.js"></script> -->
             <script src="javascript/blog.js"></script>
+            <!-- <script src="javascript/contact.js"></script> -->
     </body>
 </html>

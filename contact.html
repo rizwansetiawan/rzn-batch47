@@ -2,48 +2,58 @@
     <head>
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
         <link rel="stylesheet" href="css/contact.css">
+        <title>contact</title>
     </head>
-    <body class="bodyForm">
+    <body>
         <header>
-        <nav>
+        <nav class="navbarscontact">
             <img src="assets/logo.png"class="logo"/>
+            <i onclick="burgerNavBars()"class="ri-menu-line"id="burgerMenu"></i>
             <a href="index.html"class="act">Home</a>
-                <a href="blog.html"class="blog">Project</a>
-                <a href="contact.html"class="btn">contact me</a>
+            <a href="blog.html"class="blog">Project</a>
+            <a href="testimonials.html"class="blog2">Testimonials</a>
+            <a href="contact.html"class="btnNav">Contact Me</a>
+            <div class="hamburger"id="containerHamburger">
+                <ul class="ulresponsive">
+                    <li><a href="index.html"class="r-first"id="firstMenu">Home</a></li>
+                    <li><a href="blog.html"class="r-second"id="firstMenu2">Project</a></li>
+                    <a href="testimonials.html"class="r-third"id="firstMenu4">Testimonials</a>
+                    <li><a href="contact.html"class="r-btn"id="firstMenu3">Contact Me</a></ul></li>
+                </ul>
+            </div>
         </nav>
         </header>
-        <div class="containerForm">
+        <div class="containerForm"id="firstContainer">
         <h1>GET IN TOUCH</h1>
         <div class="form">
-           
-        <form>
+        <form class="contactForm">
             <label for="name">Name
-                <input type="text"id="name"placeholder=" enter yor name">
+                <input type="text"id="name">
             </label>
             <br>
             <label for="email">E-mail 
-                <input type="text"id="email"placeholder=" email addres">
+                <input type="text"id="email">
             </label>
             <br>
             <label for="nohp">Phone Number
-                <input type="number"required id="nohp"placeholder=" +62123****">
+                <input type="number"required id="phone">
             </label>
             <br>
             <label for="drp">Subject
                 <br>
             <select id="drp">
-                <option value=""hidden>Capres</option>
-                <option>jokowi dodo</option>
-                <option>prabowo subianto</option>
-                <option>ganjar pranowo</option>
-                <option>megawati soekarno putri</option>
+                <option value=""hidden>Programming Languange</option>
+                <option>javascript</option>
+                <option>Ruby</option>
+                <option>Swift</option>
+                <option>Java</option>
             </select>
             </label>
             <br> <br>
-            <label for="area">Pesan anda terhadap presiden kita ?
-                <textarea cols="5"rows="8"id="area"placeholder=" Pak Presiden orangnya..."></textarea>
+            <label for="area">Your Description
+            <textarea cols="5"rows="8"id="area"class="txArea"></textarea>
             </label>
-            <button type="button" class="btn-form"onclick="userValidation()">submit</button>
+            <button type="button" class="btn-form"id="btnSend" onclick="userValidation()">submit</button>
         </form>
         </div>
         </div>

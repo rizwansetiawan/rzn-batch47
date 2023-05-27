@@ -1,47 +1,42 @@
-<html>
-    <head>
-        <title>Steve Jobs</title>
-        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/contact.css">
-    </head>
-    <body style="font-family: Arial, Helvetica, sans-serif;background-color: rgb(255, 255, 255);">
-        <header>
-            <nav>
-                <img src="assets/logo.png"class="logo"/>
-                <a href="index.html"class="act"style="color:#f65217">Home</a>
-                    <a href="blog.html"class="blog">Project</a>
-                    <a href="contact.html"class="btn">contact me</a>
-            </nav>
-            </header>
-        </body>
-        <!-- external CSS aja Berantakan apalagi inline CSS  😁 -->
-        <div 
-        style="width: 80%;height: 500px;
-        box-shadow: 0 0 5px black;background-color: rgb(202, 202, 202);
-        margin: 50px auto;position: relative;border-radius: 5px;">
-        <div style="background-color: transparent;width: 80%;height: 100%;margin: 0 150px;">
-        <h2 style="position: relative;top: 30px;font-size: 30px;">Hi,Welcome To My Website</h2>
-        <div style="width: 40%;background-color: transparent;height: 100%;position: absolute;top: 38px;">
-        <p style="display: block;margin-top: 50px;text-align: justify;font-size: 12px;">Saya ingin Bekerja di Pt.Dolor sit amet consectetur adipisicing elit. Atque consequuntur eligendi veritatis temporibus molestiae necessitatibus ad pariatur perspiciatis, deleniti facilis illo exercitationem animi explicabo beatae ducimus eligendi ratione debitis. Enim optio, qui repudiandae aliquid delectus nemo exercitationem necessitatibus dolorem modi. Fuga nihil ab natus, numquam impedit odio necessitatibus dolorem modi. Fuga nihil ab natus, numquam impedit odio necessitatibus dolorem modi. Fuga nihil ab natus.</p>
-        <button style="font-family: sans-serif;border-radius: 10px;background-color: black;color: white;
-        font-size: 17px;padding:0 15px;margin-top: 20px;cursor: pointer;">contact</button>
-        <br>
-        <br><br>
-        <p style="position: absolute;">download cv  <i class="ri-download-2-line"style="font-size:20px;margin-left:10px;"></i></p>
-        <div style="margin-top: 100px;display: flex;">
-        <a href="#"class="biru"><i class="ri-linkedin-box-fill"style="font-size:30px;margin-right:60px"></i></a>
-        <a href="#"class="red"><i class="ri-instagram-line"style="font-size:30px;margin-left:-80px"></i></a>
-        <a href="#"class="biru"><i class="ri-facebook-circle-fill"style="font-size:30px;margin-left:-80px"></i></a>
-        <a href="#"class="biru"><i class="ri-twitter-fill"style="font-size:30px;margin-left:-80px"></i></a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Personal Website
+    </title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/index1.css">
+</head>
+<body>
+    <header>
+        <nav class="navbarscontact">
+            <img src="assets/logo.png"class="logo"/>
+            <i onclick="burgerNavBars()"class="ri-menu-line"id="burgerMenu"></i>
+            <a href="index.html"class="act">Home</a>
+            <a href="blog.html"class="blog">Project</a>
+            <a href="testimonials.html"class="blog2">Testimonials</a>
+            <a href="contact.html"class="btnNav">Contact Me</a>
+            <div class="hamburger"id="containerHamburger">
+                <ul class="ulresponsive">
+                    <li><a href="index.html"class="r-first"id="firstMenu">Home</a></li>
+                    <li><a href="blog.html"class="r-second"id="firstMenu2">Project</a></li>
+                    <a href="testimonials.html"class="r-third"id="firstMenu4">Testimonials</a>
+                    <li><a href="contact.html"class="r-btn"id="firstMenu3">Contact Me</a></ul></li>
+                </ul>
+            </div>
+        </nav>
+        </header>
+        <!-- content -->
+    <div class="container">
+        <div class="content1">
+            <!-- <h1>Hi,Welcome To My personal Website</h1> -->
         </div>
-        <div class="steve"style="height:131px">
-            <br><br>
-            <h3>Steve Jobs</h3>
-            <p> Ceo Apple</p>
-        <img src="assets/steve.jpg"class="stv">
+        <div class="content2">
+            <!-- <img src="assets/steve.jpg" alt="suhu"> -->
         </div>
-        </div>
-        </div>
-        </div>
-    </body>
+    </div>
+</body>
 </html>
