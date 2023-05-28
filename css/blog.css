@@ -1,30 +1,35 @@
+div#parent1{display: grid;grid-template-columns: auto auto auto;}
+
 @media only screen and (max-width:430px){
     .project-container,#firstContainerBlog{width: 90%;}
     #startEnd{display: block;}
     div label #f-date{display: block;width: 98%;}
     div label #f-end{display: block;width: 98%;margin-left: 0;}
-    form div input.fl-image#fl{margin: 56px 0 0 5px;}
+    form div input.fl-image#file{margin: 56px 0 0 5px;}
     img.logo-file{margin-left: 92%;}
     button.f-submit{margin-left: 70vw;}
     .container-card#parent1{display: block;}
     div.card2,div.card3{width: 90%;margin:0 0 20% 8%;padding:3px 0 20px 0;}
     div.icon{margin: 20px 0;}
-    div#containerButton .btn-card1{width: 30vw;padding: 0 40px;}
-    div#containerButton .btn-card2{width: 30vw;padding: 0 40px;margin-left: 40vw;}
+    div.container-btn#containerButton{margin-top: -2vh;}
+    div#containerButton .btn-card1{width: 40vw;padding: 0 40px;}
+    div#containerButton .btn-card2{width: 40vw;padding: 0 40px;margin-left: 40vw;}
+    div.container-card2{display: block;}
+    div.card4,div.card5,div.card1{width: 90%;margin:0 0 20% 8%;padding:3px 0 20px 0;}
 }
 
 @media only screen and (max-width:900px){
-   .card1,.card6{display: none}
-   div.container-btn{width: 100%;height: 25vh;margin-top: -30px;}
-   button.btn-card1{margin-left: 0;width: 90%;}
-   button.btn-card2{margin-left: 25vw;width: 68%;}
-  }
-  @media only screen and (max-width:1280px){
-    div#containerButton{width: 22vw;}
+    div#parent1{display: grid;grid-template-columns: auto auto;}
+    div.card1,div.card2,div.card3,div.card4,div.card5{width: 90%;}
+    div.container-btn{width: 100%;height: 25vh;margin-top: -30px;}
+    /* button.btn-card1{margin-left: 0;width: 90%;}*/
+    button.btn-card2{margin-left: 25vw;width: 39%;} 
   }
 
 *{margin: 0;padding: 0;box-sizing: border-box;}
-body{background-image: linear-gradient(rgba(160, 175, 186, 0.921),white)}
+body{background-color: grey;}
+/* body{background-image: linear-gradient(rgba(160, 175, 186, 0.921),white)} */
+#firstContainerBlog{transition: .8s;}
 
 .project-h1{margin: 80px auto 30px;}
 .blog-active{color:red ;}
@@ -33,19 +38,11 @@ body{background-image: linear-gradient(rgba(160, 175, 186, 0.921),white)}
     margin: 0 auto;
     height: 650px;
     background-color:transparent;
-    position: relative;
+    position: relative;}
 
-}
 #name2:hover,#f-date:hover,#f-end:hover,#f-area:hover,#user-file:hover{ box-shadow: 0 1px 15px rgba(0, 0, 0, 0.795);}
 #name2,#f-date,#f-end,#f-area,#user-file{transition: .8s;}
-/* .f-end{position: absolute;top: 23.5vh;left: 14.8vw;}
-#f-end{position: absolute;
-    width: 330%;
-    border-radius: 10px;
-    margin:0 0 10px 0;
-    padding: 10px 5px;
-    border: none;
-} */
+
 #name2{display: block;
     width: 98%;
     padding: 10px 5px;
@@ -75,18 +72,20 @@ body{background-image: linear-gradient(rgba(160, 175, 186, 0.921),white)}
     font-weight: bold;
 }
 .f-submit:hover{background-color: black;}
-
+#user{width: 10.3vw;}
 
 /*CARD*/
 
 .container-card{width: 95%;background-color: transparent;display: flex;margin-top: 50px;justify-content: space-around;}
 
-.card1,.card2,.card3,.card4,.card5,.card6{
+.card1,.card2,.card3,.card4,.card5{
     width: 400px;
     height: 500px;
-    margin: 0 0 0 50px;
+    margin: 0 0 50px 50px;
     box-shadow:0 3px 10px rgba(0, 0, 0, 0.582);
+    transition: .8s;
 }
+.card1:hover,.card2:hover,.card3:hover,.card4:hover,.card5:hover,.card6{box-shadow: 0 0 15px 7px black;}
 div.align-card1{height: 96%;width: 95%;background-color: whitesmoke;}
 .card1,.card2,.card3{background-color: whitesmoke;
         border-radius: 10px;
@@ -147,3 +146,9 @@ div.align-card1{height: 96%;width: 95%;background-color: whitesmoke;}
         top: 0;left: 0;
     }
     .btn-card1:hover,.btn-card2:hover{background-color: rgb(252, 63, 21);cursor: pointer;border-color: red;}
+    
+    /* @media only screen and (max-width:1280px){
+        div.container-card#parent1{display: grid;grid-template-columns: auto auto auto;}
+        div.card1,div.card2,div.card3,div.card4,div.card5{width: 380px;}
+        .btn-card2{width: 160px;}
+      } */

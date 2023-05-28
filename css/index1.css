@@ -1,0 +1,90 @@
+
+@media only screen and (max-width:900px){
+   #firstContainer{width: 80vw;height: 800px;background-color: lightgrey;position: relative;}
+   div.content2{width: 300px;height: 320px;position: absolute;top: 57%;left: 80px;}
+   img.photo-steve{width: 80%;height: 70%;margin-left: 30px;}
+   div.content1{width: 80%;height: 50%;margin: 10px auto}
+   p.content-paragraf{text-align: left}
+   #burgerMenu{display: block}
+};
+
+
+.ri-menu-line{display: none;}
+/*for background color*/
+@keyframes animationMe {
+    0%{background-color:rgba(195, 180, 195, 0.861)}
+    50%{background-color:rgba(125, 125, 125, 0.533)}
+    100%{background-color: rgba(139, 138, 173, 0.795);}
+    
+}
+.container{width: 70vw;
+    height: 500px;
+    background-image: linear-gradient(360deg,rgba(160, 158, 160, 0.529),rgba(222, 222, 222, 0.533)rgba(148, 148, 148, 0.639));animation: animationMe 6s infinite ease-in alternate;
+    margin: 150px auto;
+    box-shadow: 0 0 15px black;
+    border-radius: 5px;
+    display: flex;
+
+}
+.title{color: rgb(0, 0, 0);
+    margin: 40px 5px 15px 0;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.content-paragraf{font-size: 13px;
+    font-weight: bold;
+    text-align: left;
+}
+.content1{width: 37vw;
+    height: 90%;
+    background-color: transparent;
+    margin: 20px 0 0 60px;
+   
+    
+
+}
+.btn-me{padding: 10px 25px;
+    background-image: linear-gradient(360deg,rgba(255, 255, 255, 0.529),rgba(87, 87, 87, 0.817),rgba(59, 25, 162, 0.639));animation: animationMe 6s infinite ease-in alternate;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 80px 0 0 0;
+    font-size: 18px;
+    border: none;
+    box-shadow: 0 0 7px rgba(40, 255, 40, 0.727);
+    cursor: pointer;
+}
+.ri-download-2-fill{font-size: 22px;margin-left: 15px;}
+.cv{display: inline;
+    margin: 0 0 0 20px;
+}
+.icon-logo{font-size: 40px;
+    margin: 25px 0 0 0;
+}
+i:hover{color: rgb(42, 85, 255);}
+.btn-me:hover{color: black;}
+.content2{width: 20vw;
+    height: 90%;
+    background-color: whitesmoke;
+    margin: 20px 30px 0 80px;
+    box-shadow: 0 0 8px rgba(22, 218, 42, 0.592);
+    border-radius: 5px;
+
+}
+.photo-steve{width: 90%;
+    height: 78%;
+    border-radius: 10px;
+    margin: 10px 20px 10px 15px;
+}
+.text-photo{text-align: center;}
+@media only screen and (max-width:430px){
+    
+    div.container#firstContainer{width: 90%;height: 1050px;position: relative;}
+    div#contenTwo{width: 70%;height: 35%;margin: 65px 0 10px -32px}
+    .icon-logo{display: flex;justify-content: space-between}
+    .btn-me{display: block;margin-bottom: 10px};
+    .ri-download-2-fill{margin-right: 20px;}
+    h4.cv{position: absolute;top: 46.7%;left: 155px;}
+    /* div p.content-paragraf{font-size: 1px;} */
+  };
+  

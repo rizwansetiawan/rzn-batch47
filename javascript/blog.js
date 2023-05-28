@@ -1,3 +1,7 @@
+// let a = 1;
+// let i = 86400000;
+// console.log(Math.floor(a/i))
+
 //condistion for hamburger menu navigation //
 let clickIcon = document.getElementById('burgerMenu');
 let burgerMenu = document.getElementById('containerHamburger');
@@ -6,13 +10,15 @@ let clickMe = 0;
 function menuBars (){
     if(clickMe==0){
         burgerMenu.style.display='block';
+        clickIcon.style.transform='rotate(90deg)';
         containerProject.style.transition='.8s'
         containerProject.style.marginTop='200px';
         
         clickMe=1;
     }else{burgerMenu.style.display='none';
-        containerProject.style.marginTop='0';
-        containerProject.style.transition='1s'
+        clickIcon.style.transform='rotate(0)';
+        containerProject.style.marginTop='80px'
+        // containerProject.style.transition='1s'
         clickMe=0;
 
 }
@@ -72,12 +78,12 @@ event.preventDefault()
         let dateOne = new Date(document.getElementById('f-date').value);
         let dateTwo = new Date(document.getElementById('f-end').value);
         let forDate = new Date (dateTwo) - new Date (dateOne);
-        // console.log(dateOne-dateTwo);
+        console.log(dateTwo-dateOne);
         //PR //
         // alur cara memhitung durasi per post nya//
         // 1 detik = 1000 mili // 1 jam 3600 dan 1 hari 24 jam //dan 1 bulan 30 hari //dan 1 tahun 12 bulan
         let days = Math.floor(forDate/(1000*3600*24));
-        let weeks = Math.floor(forDate/(1000*3600*24*7));
+        let weeks = Math.floor(forDate/(1000*3600*24*7));//menyentuh hari ke 7 jadi minggu
         let months = Math.floor(forDate/(1000*3600*24*30));
         let years = Math.floor(forDate/(1000*3600*24*30*12));
         // let result = days+weeks+months+years;
@@ -116,16 +122,17 @@ event.preventDefault()
 }
 function renderBlog(){
     document.getElementById('parent1').innerHTML='';
-    document.getElementById('parent2').innerHTML='';
+    // document.getElementById('parent2').innerHTML='';
     //membuat perulangan agar konten yang ditampilkan bertambah ketika user mengklik tombol submit nya//
     for(let index = 0;index < dataForm.length;index++){
     document.getElementById('parent1').innerHTML+=`
+    <div class="container-card">
     <div class="card1">
                     <div class="align-card1">
-                       <img src="${dataForm[index].file} alt=""class="ft-card1"/>
+                       <img src="${dataForm[index].file}"alt="phot0-user"class="ft-card1"/>
                        <a href="blog.html"><h3>${dataForm[index].name2}</h3></a>
                        <p class="p-card-duration">Durasi:${dataForm[index].postUpdate}</p>
-                       <p class="p-card">App that is used by dumbways student, it was deployed and can be downloaded on playstore. Happy download</p>
+                       <p class="p-card">${dataForm[index].area2}</p>
                     <div class="icon">
                     ${dataForm[index].putMicrosoft}
                     ${dataForm[index].putXBox}
@@ -134,10 +141,11 @@ function renderBlog(){
                     </div>
                         <div class="container-btn">
                             <button class="btn-card1">Edit</button>
-                            <button class="btn-card2">Delete</button>
+                            <button class="btn-card2"id="user">Delete</button>
                     </div>
                 </div>
                 </div>
+</div>
 </div>`
     }
 };

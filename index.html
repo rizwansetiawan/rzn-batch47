@@ -7,6 +7,7 @@
     <title>
         Personal Website
     </title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/index1.css">
 </head>
@@ -15,7 +16,7 @@
         <nav class="navbarscontact">
             <img src="assets/logo.png"class="logo"/>
             <i onclick="burgerNavBars()"class="ri-menu-line"id="burgerMenu"></i>
-            <a href="index.html"class="act">Home</a>
+            <a href="index.html"class="actived">Home</a>
             <a href="blog.html"class="blog">Project</a>
             <a href="testimonials.html"class="blog2">Testimonials</a>
             <a href="contact.html"class="btnNav">Contact Me</a>
@@ -30,13 +31,25 @@
         </nav>
         </header>
         <!-- content -->
-    <div class="container">
+    <div class="container"id="firstContainer">
         <div class="content1">
-            <!-- <h1>Hi,Welcome To My personal Website</h1> -->
+            <p class="title">Hi.Welcome To My personal Website</p>
+            <p class="content-paragraf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, dicta animi quasi sequi veritatis modi velit nihil dolore porro harum. Quae velit corrupti exercitationem consequatur aliquid iste excepturi esse repudiandae, pariatur suscipit nulla cupiditate. Eum, illum! Ipsum perspiciatis dolorum facilis voluptatem facere!</p>
+            <button class="btn-me">Hit Me Up</button><h4 class="cv">download CV<i class="ri-download-2-fill"></i></h4>
+            <div class="icon-logo">
+                <i class="ri-instagram-fill"></i>
+                <i class="ri-linkedin-fill"></i>
+                <i class="ri-facebook-fill"></i>
+                <i class="ri-twitter-fill"></i>
+            </div>
         </div>
-        <div class="content2">
-            <!-- <img src="assets/steve.jpg" alt="suhu"> -->
+        <div class="content2"id="contenTwo">
+            <img src="assets/steve.jpg" alt="suhu"class="photo-steve">
+            <h2 class="text-photo">Founder Apple</h2>
+            <h3 class="text-photo">steve jobs</h3>
+
         </div>
     </div>
+    <script src="javascript/index.js"></script>
 </body>
 </html>
