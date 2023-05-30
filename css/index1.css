@@ -8,18 +8,17 @@
    #burgerMenu{display: block}
 };
 
-
 .ri-menu-line{display: none;}
 /*for background color*/
 @keyframes animationMe {
-    0%{background-color:rgba(195, 180, 195, 0.861)}
-    50%{background-color:rgba(125, 125, 125, 0.533)}
-    100%{background-color: rgba(139, 138, 173, 0.795);}
+    0%{background-color:rgba(229, 182, 229, 0.654)}
+    50%{background-color:rgba(249, 255, 78, 0.583)}
+    100%{background-color: rgba(255, 251, 44, 0.788);}
     
 }
 .container{width: 70vw;
     height: 500px;
-    background-image: linear-gradient(360deg,rgba(160, 158, 160, 0.529),rgba(222, 222, 222, 0.533)rgba(148, 148, 148, 0.639));animation: animationMe 6s infinite ease-in alternate;
+    background-image: linear-gradient(360deg,);animation: animationMe 6s infinite ease-in alternate;
     margin: 150px auto;
     box-shadow: 0 0 15px black;
     border-radius: 5px;
@@ -51,7 +50,7 @@
     margin: 80px 0 0 0;
     font-size: 18px;
     border: none;
-    box-shadow: 0 0 7px rgba(40, 255, 40, 0.727);
+    box-shadow: 0 0 7px rgb(255, 56, 16);
     cursor: pointer;
 }
 .ri-download-2-fill{font-size: 22px;margin-left: 15px;}
@@ -67,7 +66,7 @@ i:hover{color: rgb(42, 85, 255);}
     height: 90%;
     background-color: whitesmoke;
     margin: 20px 30px 0 80px;
-    box-shadow: 0 0 8px rgba(22, 218, 42, 0.592);
+    box-shadow: 0 0 8px rgb(255, 63, 15);
     border-radius: 5px;
 
 }

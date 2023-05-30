@@ -1,0 +1,81 @@
+@media only screen and (max-width:900px){
+    i#burgerMenu{display: block;}
+    div.container-testi{display: grid;grid-template-columns: auto auto;}
+    div.container1,div.container2,div.container3,
+    div.container4,div.container5,div.container6{width: 40vw;height: 90%;}
+}
+
+hr#dropdown{width: 1px;margin-left: -5px;}
+.title{margin:70px auto 50px;
+    color:whitesmoke;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.by-stars{color: white;
+    text-align: center;
+}
+.all{width: 70px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btn-star:hover{background-color: #ff3f1d;}
+.stars-testi{display: flex;
+    margin:0 auto;
+    width: 200px;
+    margin-top: 20px;
+    height: 30px;
+    justify-content: space-around;
+    width: 300px;
+}
+.testi-user{font-weight: bold;font-size: 15px;}
+.title-testi{margin: 50px auto 50px;
+    display: flex;
+}
+
+.btn-star{
+    padding: 2px 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+h4 i.ri-star-fill{font-size: 20px;}
+.star-user{margin: 10px 0 0 90%;font-size: 15px;}
+.container1,.container2,.container3,.container4,.container5,.container6{width: 28vw;height: 90%;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.container-testi{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 50px 0 0 50px;
+    height: 400px;
+    width: 90%;
+
+}
+
+.photo-testi{width: 100%;margin: 8px 0;height: 70%;border-radius: 8px;}
+.icon i.ri-star-fill{font-size: 20px;}
+
+.child-1,.child-2,.child-3{width: 90%;height: 90%;;margin: 18px auto 0;}
+
+.icon{margin: 80px 0 0 150px;display: flex;justify-content: space-around;}
+
+@media only screen and (max-width:430px){
+    div.container-testi{display: grid;grid-template-columns: auto;}
+    div.container1,div.container2,div.container3,div.container4,div.container5,div.container6{width: 80vw;height: 90%;}
+    div.stars-testi{width: 150px;margin-bottom: 70px;height: 50px;}
+    .icon{margin: 40px 0 0 150px;display: flex;justify-content: space-around;}
+
+
+}

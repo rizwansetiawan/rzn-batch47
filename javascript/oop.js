@@ -1,22 +1,26 @@
 // constuctor function//
 //method//
 function Person (){
-    this.firstName = '';
+    this.language = '';
     this.lastName = '';
     this.middleName = function (name){
-        console.log(`hello ${name} my name is ${this.firstName}`)
+    console.log(`hello ${name} my programming language is ${this.language}`)
     };
 }
 const rzn = new Person();
-rzn.firstName = 'java';
+rzn.language = 'java';
 rzn.middleName ('jamal')
 const stn = new Person();
-stn.firstName = 'ruby';
-stn.middleName ('dewi');
+stn.language = 'swift';
+stn.middleName ('udin');
 
 
 console.log(rzn);
 console.log(stn);
+
+
+//PR//
+//inheritence//
 
 //method constuctor funtion//
 // function SayHello (){

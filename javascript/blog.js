@@ -1,8 +1,6 @@
-// let a = 1;
-// let i = 86400000;
-// console.log(Math.floor(a/i))
 
 //condistion for hamburger menu navigation //
+
 let clickIcon = document.getElementById('burgerMenu');
 let burgerMenu = document.getElementById('containerHamburger');
 let containerProject = document.getElementById('firstContainerBlog');
@@ -11,14 +9,12 @@ function menuBars (){
     if(clickMe==0){
         burgerMenu.style.display='block';
         clickIcon.style.transform='rotate(90deg)';
-        containerProject.style.transition='.8s'
+        containerProject.style.transition='.8s';
         containerProject.style.marginTop='200px';
-        
         clickMe=1;
     }else{burgerMenu.style.display='none';
         clickIcon.style.transform='rotate(0)';
-        containerProject.style.marginTop='80px'
-        // containerProject.style.transition='1s'
+        containerProject.style.marginTop='80px';
         clickMe=0;
 
 }
@@ -45,8 +41,6 @@ if(name2 == ''){
 }
 };
 
-// let remove = document.getElementById('containerCard2');
-
 
 //untuk menyimpan data yang sudah di pilih //
 let dataForm = [];
@@ -66,6 +60,7 @@ event.preventDefault()
     const playstation = '<i class="ri-playstation-line"></i>';
     const xBox = '<i class="ri-xbox-fill"></i>';
 
+    // TERNARY OPERATOR //
     let putMicrosoft = document.getElementById('ms').checked ?microsoft :'';
     let putXBox = document.getElementById('xb').checked ?xBox :'';
     let putPlaystation = document.getElementById('ps').checked ?playstation :'';
@@ -88,7 +83,7 @@ event.preventDefault()
         let years = Math.floor(forDate/(1000*3600*24*30*12));
         // let result = days+weeks+months+years;
         // console.log('hasil dari ='+Math.ceil(forDate/result))
-    
+        
         if (years == 1 || years > 0) {
             return `${years} Tahun` 
         } else if ( months == 1 || months > 0) {
