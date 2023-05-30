@@ -1,22 +1,34 @@
+//make class//
+class Gadget {
+    constructor (brand,type){
+    this.brand = brand;
+    this.type = type;
+    }
+    getinfo(){
+        return `this gadget is ${this.brand} and operation system is ${this.type}`
+    }
+}
+
+
 // constuctor function//
 //method//
-function Person (){
-    this.language = '';
-    this.lastName = '';
-    this.middleName = function (name){
-    console.log(`hello ${name} my programming language is ${this.language}`)
-    };
-}
-const rzn = new Person();
-rzn.language = 'java';
-rzn.middleName ('jamal')
-const stn = new Person();
-stn.language = 'swift';
-stn.middleName ('udin');
+// function Person (){
+//     this.language = '';
+//     this.lastName = '';
+//     this.middleName = function (name){
+//     console.log(`hello ${name} my programming language is ${this.language}`)
+//     };
+// }
+// const rzn = new Person();
+// rzn.language = 'java';
+// rzn.middleName ('jamal')
+// const stn = new Person();
+// stn.language = 'swift';
+// stn.middleName ('udin');
 
 
-console.log(rzn);
-console.log(stn);
+// console.log(rzn);
+// console.log(stn);
 
 
 //PR//
