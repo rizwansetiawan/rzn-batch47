@@ -11,15 +11,15 @@
 .ri-menu-line{display: none;}
 /*for background color*/
 @keyframes animationMe {
-    0%{background-color:rgba(229, 182, 229, 0.654)}
-    50%{background-color:rgba(249, 255, 78, 0.583)}
-    100%{background-color: rgba(255, 251, 44, 0.788);}
+    0%{background-color:rgba(190, 225, 255, 0.912);}
+    50%{background-color:rgba(205, 205, 205, 0.583)}
+    100%{background-color: rgba(189, 214, 214, 0.689);}
     
 }
 .container{width: 70vw;
     height: 500px;
-    background-image: linear-gradient(360deg,);animation: animationMe 6s infinite ease-in alternate;
-    margin: 150px auto;
+    background-color: rgba(162, 182, 200, 0.637);
+    margin: 100px auto;
     box-shadow: 0 0 15px black;
     border-radius: 5px;
     display: flex;
@@ -77,7 +77,7 @@ i:hover{color: rgb(42, 85, 255);}
 }
 .text-photo{text-align: center;}
 @media only screen and (max-width:430px){
-    
+    div#containerCard{display: grid !important;grid-template-columns: auto !important;}
     div.container#firstContainer{width: 90%;height: 1050px;position: relative;}
     div#contenTwo{width: 70%;height: 35%;margin: 65px 0 10px -32px}
     .icon-logo{display: flex;justify-content: space-between}
@@ -86,4 +86,5 @@ i:hover{color: rgb(42, 85, 255);}
     h4.cv{position: absolute;top: 46.7%;left: 155px;}
     /* div p.content-paragraf{font-size: 1px;} */
   };
-  
+  /* Use Bootstrap */
+  /* div .card-container#containerCard{display: grid !important;grid-template-columns: auto auto auto !important;} */
