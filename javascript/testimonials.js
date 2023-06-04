@@ -144,6 +144,7 @@ function menuBars (){
 // }
 // document.getElementById('testimonials').innerHTML=testimonialsHtml;
 // };
+//WITH ASYNCHRONOUS//
 const promises = new Promise(function(resolve,rejected){
     const xhr = new XMLHttpRequest();
     xhr.open('GET','https://api.npoint.io/393a8147c3cc0fd529bc',true);

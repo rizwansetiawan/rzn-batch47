@@ -1,31 +1,20 @@
-//dom BERHASIL//
-// let home = document.getElementById('firstMenu');
-// let project = document.getElementById('firstMenu2');
-// let contactMe = document.getElementById('firstMenu3')
-// let menuBarsNew = document.getElementById('burgerMenu');
-// menuBarsNew.addEventListener('click',function(){
-//     home.classList.toggle('newOne');
-//     project.classList.toggle('newOne');
-//     contactMe.classList.toggle('newBtn');
-// })
-//menggunkana if else//
-let navMenu = false;
-let firstContainer = document.getElementById('firstContainer');
-let getBars = document.getElementById('containerHamburger');
-function burgerNavBars(){
-    if(navMenu==false){
-        getBars.style.display='block';
-        firstContainer.style.marginTop='200px';
-        firstContainer.style.transition='.8s'
-        //true
-        navMenu=true; // sama dengan nya satu ternyata variablenya di identifier ulang 
-        //agar masuk ke kondisi yang di bawah/else
-        // console.log(navMenu) // 
-    }else{getBars.style.display='none';
-        firstContainer.style.marginTop='80px';
-        navMenu=false;// sama dengan nya satu ternyata variable nya di 
-        //identifier ulang agar masuk lagi ke kondisi yang pertama
-        // console.log(navMenu)
+
+let clickIcon = document.getElementById('burgerMenu');
+let containerProject = document.getElementById('slideContent');
+let clickMe = 0;
+function menuBars(){
+    
+    if(clickMe==0){
+        clickIcon.style.transform='rotate(90deg)';
+        clickIcon.style.transition='.6s'
+        containerProject.style.transition='.8s';
+        containerProject.style.marginTop='300px';
+        clickMe=1;
+    }else{
+        clickIcon.style.transform='rotate(0)';
+        containerProject.style.marginTop='80px';
+        clickMe=0;
+
 }
 }
 
@@ -34,44 +23,32 @@ function userValidation()
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
     let phone = document.getElementById("phone").value;
-    let subject = document.getElementById("drp").value;
-    let tArea = document.getElementById("area").value;
+    let subject = document.getElementById("subject").value;
+    let textarea = document.getElementById("textarea").value;
     
 if(name == ""){
-    return alert("data yang anda masukan angka atau data yang anda masukan kosong");
+    return alert("please input your name");
 }else if(email == ""){
-    return alert("email perlu di isi atau salah ");
-}else if(phone == "" || phone ==0857){
-    return alert("no hp harus di isi");
+    return alert("please input your email address");
+}else if(phone == ""){
+    return alert("please input your phone number");
 }else if(subject == ""){
-    return alert("pilih lah presiden kita");
+    return alert("please select subject");
 }
-else if(tArea == ""){
-    return alert("masukan atau kritik anda terhadap presiden kita apa ?");
+else if(textarea == ""){
+    return alert("please fill is your description ");
 
 }
-//gimana caranya kalo mau manggil ngga satu satu gini ya //
-// console.log(name);
-// console.log(email);
-// console.log(nohp);
-// console.log(subject);
-// console.log(tArea);
-
-let objectId ={
+let dataUser = {
     name,
     email,
     phone,
     subject,
-    tArea,
-};
-console.log(objectId)
-
-let emailReceiver="rizwandhoel@gmail.com";
-
-let newElement = document.createElement("a");
-newElement.href="mailto:"+emailReceiver+"?subject="+subject+
-"&body=halo nama saya adalah "+name+" masukan anda terhadap president kita: "
-+tArea+" dan jika mau menghubungi saya di: "+phone+"terimakasih";
+    textarea
+}
+console.log(dataUser)
+let emailReceiver = "rizwandhoel@gmail.com";
+let newElement =document.createElement('a');
+newElement.href=`mailto:${emailReceiver}?subject=${subject}&body=helo my name is ${name} and my phone is ${phone} and ${textarea} thankyou`;
 newElement.click();
 }
-
