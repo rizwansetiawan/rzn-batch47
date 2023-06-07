@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head><title>Project</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="public/css/style.css">
+        <!-- <link rel="stylesheet" href="css/contact.css"> -->
+        <link rel="stylesheet" href="public/css/blog.css">
+        <title>blog</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top"id="st-nav">
+                <div class="container-fluid p-2">
+                  <img src="public/images/logo.png" alt="dumbways"class="ms-1">
+                  <button onclick="menuBars()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"id="burgerMenu"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link fs-5 fw-medium ms-5 me-2" aria-current="page" href="index"class="s-active"id="condition">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active text-danger fs-5 fw-medium ms-5 me-2" href="blog"id="condition">Add Project</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link fs-5 fw-medium ms-5 me-2" href="testimonials"id="condition">Testimonials
+                        </a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <a href="contact" class="btn me-3 text-light fw-bold btn-md focus-ring dark-focus">Contact Me</a>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+            </header>
+                <div id="slideContent"></div>
+                <h1 class="text-center mt-5"id="titleForm">Add Your Project</h1>
+                <hr class="hr">
+                <form action="/add-project" method="post" onsubmit="formBlog(event)">
+                    
+                    <div class="container-text-center"id="containerForm">
+                        
+                        <div class="container-sm mb-1 px-3 ">
+                            <label for="name" class="form-label fw-bold">Name</label>
+                            <div class="input-group mb-3">
+                              <input type="text" name="name" required class="form-control" id="name"aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                            </div>
+                            <label for="date1" class="form-label ms-3 fw-bold"id="startDate">Start Date</label>
+                            <label for="date2"id="endDate"class=" fw-bold">End Date</label>
+                            <div class="input-group mb-1 gap-3 px-3">
+                                <input type="date"name="date1" class="form-control"aria-label="Username"id="date1"required>
+                                <input type="date"name="date2" class="form-control" aria-label="Server"id="date2"required>
+                            </div>
+                            <label for="textarea"class=" mb-1 mt-3 px-3 fw-bold">Description</label>
+                            <div class="input-group px-3">
+                                <textarea class="form-control"name="textarea" aria-label="With textarea"cols=15 rows="5"id="textarea"required></textarea>
+                            </div>
+                            <label for="checkbox"class="fw-bold mt-3 mb-2 px-3 fw-bold">Technologies</label>
+                            <div class="input-group mb-3 px-3"id="checkboxGroup">
+                                <input class="form-check-input mt-1" type="checkbox"name="vueJs"id="vueJs" value="" aria-label="Checkbox for following text input"id="vueJs"><span class="ms-2 me-5">Vue JS</span> 
+                                <input class="form-check-input mt-1 ms-3" type="checkbox"name="angularJs"id="angularJs" value="" aria-label="Checkbox for following text input"id="angularJs"><span class="ms-2">Angular JS</span> 
+                            </div>
+                            <div class="input-group mb-3 px-3"id="checkboxGroup">
+                                <input class="form-check-input mt-1" type="checkbox"name="reactJs"id="reactJs" value="" aria-label="Checkbox for following text input"><span class="ms-2 me-5"id="reactJs">React JS</span>                                   
+                                <input class="form-check-input mt-1 " type="checkbox"name="javascript"id="javascript" value="" aria-label="Checkbox for following text input"><span class="ms-2"id="javascript">javascript</span> 
+                            </div>
+                                <label for="inputGroupFile02"id="positionFile"class=" px-3 fw-bold">Upload image<img src="public/images/file.png"class="linkPointer"id="fileUpload"></label>
+                                <div class="input-group mb-3 px-3">
+                                    <input type="file" class="form-control " id="inputGroupFile02">
+                                </div>
+                                <button type="submit" class="btn btn-danger"id="submit"onclick="">Submit</button>
+                    </div>
+
+                   
+                      
+                </form>
+               
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+            <script src="public/javascript/blog.js"></script>
+    </body>
+</html>

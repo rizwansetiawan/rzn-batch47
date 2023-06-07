@@ -1,0 +1,10 @@
+/* NAV FOR ALL PAGE */
+
+#st-nav{background-color: whitesmoke;}
+.btn{background-color: #ff4c1a !important;}
+.btn:hover{background-color: black !important;}
+body{background-color: rgba(116, 188, 188, 0.342) !important;}
+@media only screen and (max-width:900px){
+    #condition{margin-left: 0 !important;}
+}
+
