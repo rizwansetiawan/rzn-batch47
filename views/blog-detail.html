@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="/public/css/blog.css">
         <link rel="stylesheet" href="/public/css/contact.css">
         <link rel="stylesheet" href="/public/css/style.css">
+        <link rel="stylesheet" href="/public/css/blog-detail.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
     </head>
@@ -22,10 +23,14 @@
                             <a class="nav-link fs-5 fw-medium ms-5 me-2" aria-current="page" href="index"class="s-active"id="condition">Home</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active text-danger fs-5 fw-medium ms-5 me-2" href="blog"id="condition">Add Project</a>
+                            <a class="nav-link fs-5 fw-medium ms-5 me-2" href="blog"id="condition">Add Project</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link fs-5 fw-medium ms-5 me-2" href="testimonials"id="condition">Testimonials
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link fs-5 fw-medium ms-5 me-2 active text-danger" href="testimonials"id="condition">Blog
                             </a>
                           </li>
                         </ul>
@@ -36,26 +41,28 @@
                     </div>
                   </nav>
                 </header>
-                <div class="container-fluid">
-            <div class="detail-blog ms-5">
-                
-                <img src="/public/images/ps.jpg" alt="Playstation"class="Playstation">
+            <div class="container">
+              <div class="detail-blog ms-5"id="container">
+                <div class="card">
+              <h1 class="fw-bold mt-5 ms-5">{{.Blog.Title}}</h1>
+                <img src="/public/images/img4.png"class="ms-5  photo" alt="Playstation"class="Playstation">
                 <div class="child-blog">
-                    <h1 class="text-danger fw-bold">{{.title}}</h1>
-                <h2>Duration</h2>
-                <i class="ri-calendar-todo-fill"></i>12 nov 2021 - 12 dec 2021
+                    
+                <h4 class="ms-5">Duration</h4>
+                <i class="ri-calendar-todo-fill ms-5"></i>{{.Blog.StartDate}} - {{.Blog.EndDate}}
                <br>
-               <h1 class="text-danger">{{.Id}}</h1>
-                <i class="ri-time-fill"></i>1 month
-                <h2>Technologies</h2>
-                <i class="ri-apple-fill"></i>Apple
-                <i class="ri-microsoft-fill"></i>Microsoft
-                <i class="ri-playstation-line"></i>Playstation
-                <i class="ri-xbox-fill"></i>X-Box
+               <h5 class=" ms-5">Article By: {{.Blog.Author}}</h5>
+                <h2 class="ms-5">Technologies</h2>
+                <i class="ri-apple-fill ms-5"></i>Apple
+                <i class="ri-microsoft-fill ms-5"></i>Microsoft
+                <i class="ri-playstation-line ms-5"></i>Playstation
+                <i class="ri-xbox-fill ms-5" ></i>X-Box
+              
             </div>
             <br>
-            <p class="p-detail text-danger fw-bold">{{.content}}</p>
-
+            <p class="p-detail fw-bold ms-5">
+                {{.Blog.Content}}</p>
+          </div>
             </div>
         </div>
              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
