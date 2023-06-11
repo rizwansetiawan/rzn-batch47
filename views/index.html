@@ -77,11 +77,15 @@
                     <p class="card-text">{{$data.Content}}</p>
                     
                     <div class="d-flex grid gap-3">
-                      {{$data.Tech1}}
-                     <!-- <h3><i class="ri-vuejs-fill"></i></h3> -->
+                      {{if $data.VueJs}}
+                    <h3><i class="ri-vuejs-fill"></i></h3>
+                      {{end}}{{if $data.JavaScript}}
                     <h3><i class="ri-javascript-fill"></i></h3>
+                      {{end}}{{if $data.AngularJs}}
                     <h3><i class="ri-angularjs-fill"></i></i></h3>
+                      {{end}}{{if $data.ReactJs}}
                     <h3><i class="ri-reactjs-line"></i></h3>
+                      {{end}}
                   </div>
                   </div>
                   <div class="card-body">

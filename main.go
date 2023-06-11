@@ -1,6 +1,7 @@
 package main
 
 import (
+	"b47s1/connection"
 	"fmt"
 	"net/http"
 	"strconv"
@@ -10,6 +11,8 @@ import (
 )
 
 func main() {
+	connection.DatabaseConnect()
+
 	e := echo.New()
 
 	e.Static("/public", "public")
@@ -23,47 +26,57 @@ func main() {
 
 	e.POST("/add-project", addProject)
 	e.POST("/delete-blog/:id", deleteBlog)
+	// e.POST("/new-data",newData)
+
 	e.Logger.Fatal(e.Start("localhost:5000"))
 
 }
 
 type Blog struct {
-	Title     string
-	Content   string
-	StartDate string
-	EndDate   string
-	// Image     string
-	Author string
-	Tech1  string
+	Title      string
+	Content    string
+	StartDate  string
+	EndDate    string
+	Author     string
+	VueJs      bool
+	AngularJs  bool
+	JavaScript bool
+	ReactJs    bool
 }
 
 var dataBlog = []Blog{
 	{
-		Title:     "Vue Js",
-		Content:   "Some quick example text to build on the card title and make up the bulk of the cards content.",
-		StartDate: "08/06/2023",
-		EndDate:   "09/06/2023",
-		// Image:     "public/images/img4.png",
-		Author: "Marshal",
-		Tech1:  "<h3><i class='ri-vuejs-fill'></i></h3>",
+		Title:      "Vue Js",
+		Content:    "Some quick example text to build on the card title and make up the bulk of the cards content.",
+		StartDate:  "08/06/2023",
+		EndDate:    "09/06/2023",
+		Author:     "Marshal",
+		VueJs:      true,
+		AngularJs:  true,
+		JavaScript: true,
+		ReactJs:    true,
 	},
 	{
-		Title:     "Javascript",
-		Content:   "Some quick example text to build on the card title and make up the bulk of the cards content.",
-		StartDate: "08/06/2023",
-		EndDate:   "09/06/2023",
-		// Image:     "public/images/img2.png",
-		Author: "Robin Sharma",
-		Tech1:  "<h3><i class='ri-vuejs-fill'></i></h3>",
+		Title:      "Javascript",
+		Content:    "Some quick example text to build on the card title and make up the bulk of the cards content.",
+		StartDate:  "08/06/2023",
+		EndDate:    "09/06/2023",
+		Author:     "Robin Sharma",
+		VueJs:      true,
+		AngularJs:  true,
+		JavaScript: false,
+		ReactJs:    true,
 	},
 	{
-		Title:     "Angular Js",
-		Content:   "Some quick example text to build on the card title and make up the bulk of the cards content.",
-		StartDate: "08/06/2023",
-		EndDate:   "12/12/2023",
-		// Image:     "public/images/img3.png",
-		Author: "Bill Gates",
-		Tech1:  "<h3><i class='ri-vuejs-fill'></i></h3>",
+		Title:      "Angular Js",
+		Content:    "Some quick example text to build on the card title and make up the bulk of the cards content.",
+		StartDate:  "08/06/2023",
+		EndDate:    "12/12/2023",
+		Author:     "Bill Gates",
+		VueJs:      true,
+		AngularJs:  false,
+		JavaScript: true,
+		ReactJs:    false,
 	},
 }
 
@@ -113,13 +126,15 @@ func blogDetail(c echo.Context) error {
 	for i, data := range dataBlog {
 		if id == i {
 			BlogDetail = Blog{
-				Title:     data.Title,
-				StartDate: data.StartDate,
-				EndDate:   data.EndDate,
-				Content:   data.Content,
-				// Image:     data.Image,
-				Author: data.Author,
-				Tech1:  data.Tech1,
+				Title:      data.Title,
+				StartDate:  data.StartDate,
+				EndDate:    data.EndDate,
+				Content:    data.Content,
+				Author:     data.Author,
+				VueJs:      data.VueJs,
+				AngularJs:  data.AngularJs,
+				JavaScript: data.JavaScript,
+				ReactJs:    data.ReactJs,
 			}
 		}
 	}
@@ -146,17 +161,37 @@ func addProject(c echo.Context) error {
 	date1 := c.FormValue("date1")
 	date2 := c.FormValue("date2")
 	content := c.FormValue("textarea")
-	println("author	:" + title)
-	println("start date :" + date1)
-	println("end date :" + date2)
-	println("description:" + content)
+	// println("author	:" + title)
+	// println("start date :" + date1)
+	// println("end date :" + date2)
+	// println("description:" + content)
 
+	// var vue bool
+	// if c.FormValue("vueJs") == "checked" {
+	// 	vue = true
+	// }
+	// var angular bool
+	// if c.FormValue("angularJs") == "checked" {
+	// 	angular = true
+	// }
+	// var javascript bool
+	// if c.FormValue("javascript") == "checked" {
+	// 	javascript = true
+	// }
+	// var react bool
+	// if c.FormValue("reactJs") == "checked" {
+	// 	react = true
+	// }
 	var newBlog = Blog{
-		Title:     title,
-		StartDate: date1,
-		EndDate:   date2,
-		Content:   content,
-		Author:    "user",
+		Title:      title,
+		StartDate:  date1,
+		EndDate:    date2,
+		Content:    content,
+		Author:     "user",
+		VueJs:      true, //belum berhasil pengkondisian checkbox user
+		AngularJs:  true,
+		JavaScript: true,
+		ReactJs:    true, //
 	}
 
 	dataBlog = append(dataBlog, newBlog)

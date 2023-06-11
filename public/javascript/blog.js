@@ -1,49 +1,49 @@
 
 //condistion for hamburger menu navigation //
 // alert('hello')
-let clickIcon = document.getElementById('burgerMenu');
-// let burgerMenu = document.getElementById('containerHamburger');
-let containerProject = document.getElementById('slideContent');
-let clickMe = 0;
-function menuBars (){
+// let clickIcon = document.getElementById('burgerMenu');
+// // let burgerMenu = document.getElementById('containerHamburger');
+// let containerProject = document.getElementById('slideContent');
+// let clickMe = 0;
+// function menuBars (){
     
-    if(clickMe==0){
-        // burgerMenu.style.display='block';
-        clickIcon.style.transform='rotate(90deg)';
-        clickIcon.style.transition='.6s'
-        containerProject.style.transition='.8s';
-        containerProject.style.marginTop='300px';
-        clickMe=1;
-    }else{//burgerMenu.style.display='none';
-        clickIcon.style.transform='rotate(0)';
-        containerProject.style.marginTop='80px';
-        clickMe=0;
+//     if(clickMe==0){
+//         // burgerMenu.style.display='block';
+//         clickIcon.style.transform='rotate(90deg)';
+//         clickIcon.style.transition='.6s'
+//         containerProject.style.transition='.8s';
+//         containerProject.style.marginTop='300px';
+//         clickMe=1;
+//     }else{//burgerMenu.style.display='none';
+//         clickIcon.style.transform='rotate(0)';
+//         containerProject.style.marginTop='80px';
+//         clickMe=0;
 
-}
-}
-//pop up for user input & validation //
-function formUser(event){
-    event.preventDefault()
-    let name2 = document.getElementById('name').value;
-    let date1 = document.getElementById('date1').value;
-    let date2 = document.getElementById('date2').value;
-    let area2 = document.getElementById('textarea').value;
-    let file  = document.getElementById('inputGroupFile02').value;
+// }
+// }
+// //pop up for user input & validation //
+// function formUser(event){
+//     event.preventDefault()
+//     let name2 = document.getElementById('name').value;
+//     let date1 = document.getElementById('date1').value;
+//     let date2 = document.getElementById('date2').value;
+//     let area2 = document.getElementById('textarea').value;
+//     let file  = document.getElementById('inputGroupFile02').value;
     
     
-if(name2 == ''){
-    return alert('Name is Required')
-}else if(date1 == ''){
-    return alert('please select start date')
-}else if(date2 == ''){
-    return alert('please select end date')
-}else if(area2 == ''){
-    return alert('input your description')
-}else if(file == ''){
-    return alert('image must be choose')
-}
+// if(name2 == ''){
+//     return alert('Name is Required')
+// }else if(date1 == ''){
+//     return alert('please select start date')
+// }else if(date2 == ''){
+//     return alert('please select end date')
+// }else if(area2 == ''){
+//     return alert('input your description')
+// }else if(file == ''){
+//     return alert('image must be choose')
+// }
 
-};
+// };
 
 //untuk menyimpan data yang sudah di pilih //
 // let dataForm = [];
@@ -147,8 +147,6 @@ if(name2 == ''){
 // </div>`
 //     }
 // };
-
-
 
 
 
