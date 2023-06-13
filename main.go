@@ -2,10 +2,12 @@ package main
 
 import (
 	"b47s1/connection"
+	"context"
 	"fmt"
 	"net/http"
 	"strconv"
 	"text/template"
+	"time"
 
 	"github.com/labstack/echo/v4"
 )
@@ -18,65 +20,68 @@ func main() {
 	e.Static("/public", "public")
 
 	e.GET("/hello", helloWorld)
-	e.GET("/index", home)
+	e.GET("/home", home)
 	e.GET("/contact", contact)
-	e.GET("/blog", blog)
+	e.GET("/add-project", addProject)
 	e.GET("/testimonials", testimonials)
-	e.GET("blog-detail/:id", blogDetail)
+	e.GET("/blog-detail/:id", blogDetail)
 
-	e.POST("/add-project", addProject)
+	e.POST("/update-project", updateProject)
 	e.POST("/delete-blog/:id", deleteBlog)
-	// e.POST("/new-data",newData)
 
 	e.Logger.Fatal(e.Start("localhost:5000"))
 
 }
 
 type Blog struct {
+	ID         int
 	Title      string
 	Content    string
+	Image      string
 	StartDate  string
 	EndDate    string
+	PostDate   time.Time
 	Author     string
-	VueJs      bool
-	AngularJs  bool
-	JavaScript bool
-	ReactJs    bool
+	VueJs      string
+	AngularJs  string
+	JavaScript string
+	ReactJs    string
 }
 
 var dataBlog = []Blog{
 	{
-		Title:      "Vue Js",
-		Content:    "Some quick example text to build on the card title and make up the bulk of the cards content.",
-		StartDate:  "08/06/2023",
-		EndDate:    "09/06/2023",
-		Author:     "Marshal",
-		VueJs:      true,
-		AngularJs:  true,
-		JavaScript: true,
-		ReactJs:    true,
+
+		// Title:     "Vue Js",
+		// Content:   "Some quick example text to build on the card title and make up the bulk of the cards content.",
+		// StartDate: "08/06/2023",
+		// EndDate:   "09/06/2023",
+		// Author: "Marshal",
+		// VueJs:      true,
+		// AngularJs:  true,
+		// JavaScript: true,
+		// ReactJs:    true,
 	},
 	{
-		Title:      "Javascript",
-		Content:    "Some quick example text to build on the card title and make up the bulk of the cards content.",
-		StartDate:  "08/06/2023",
-		EndDate:    "09/06/2023",
-		Author:     "Robin Sharma",
-		VueJs:      true,
-		AngularJs:  true,
-		JavaScript: false,
-		ReactJs:    true,
+		// Title:     "Javascript",
+		// Content:   "Some quick example text to build on the card title and make up the bulk of the cards content.",
+		// StartDate: "08/06/2023",
+		// EndDate:    "09/06/2023",
+		// Author: "Robin Sharma",
+		// VueJs:      true,
+		// AngularJs:  true,
+		// JavaScript: false,
+		// ReactJs:    true,
 	},
 	{
-		Title:      "Angular Js",
-		Content:    "Some quick example text to build on the card title and make up the bulk of the cards content.",
-		StartDate:  "08/06/2023",
-		EndDate:    "12/12/2023",
-		Author:     "Bill Gates",
-		VueJs:      true,
-		AngularJs:  false,
-		JavaScript: true,
-		ReactJs:    false,
+		// Title:     "Angular Js",
+		// Content:   "Some quick example text to build on the card title and make up the bulk of the cards content.",
+		// StartDate: "08/06/2023",
+		// EndDate:    "12/12/2023",
+		// Author: "Bill Gates",
+		// VueJs:      true,
+		// AngularJs:  false,
+		// JavaScript: true,
+		// ReactJs:    false,
 	},
 }
 
@@ -86,13 +91,28 @@ func helloWorld(c echo.Context) error {
 }
 
 func home(c echo.Context) error {
+	data, _ := connection.Conn.Query(context.Background(), "SELECT id, title, content, image, post_date, vue, angular, javascript, react FROM tb_blog")
+
+	var result []Blog
+	for data.Next() {
+		var each = Blog{}
+		err := data.Scan(&each.ID, &each.Title, &each.Content, &each.Image, &each.PostDate, &each.VueJs, &each.AngularJs, &each.JavaScript, &each.ReactJs)
+		if err != nil {
+			fmt.Println(err.Error())
+			return c.JSON(http.StatusInternalServerError, map[string]string{"message": err.Error()})
+		}
+		each.Author = "setiawan"
+		result = append(result, each)
+	}
+	blogs := map[string]interface{}{
+		"Blogs": result,
+	}
+
 	var tmp, err = template.ParseFiles("views/index.html")
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"message": err.Error()})
 	}
-	blogs := map[string]interface{}{
-		"Blogs": dataBlog,
-	}
+
 	return tmp.Execute(c.Response(), blogs)
 
 }
@@ -105,7 +125,7 @@ func contact(c echo.Context) error {
 	return tmp.Execute(c.Response(), nil)
 }
 
-func blog(c echo.Context) error {
+func addProject(c echo.Context) error {
 	var tmp, err = template.ParseFiles("views/blog.html")
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"message": err.Error()})
@@ -156,7 +176,7 @@ func testimonials(c echo.Context) error {
 	}
 	return tmp.Execute(c.Response(), nil)
 }
-func addProject(c echo.Context) error {
+func updateProject(c echo.Context) error {
 	title := c.FormValue("name")
 	date1 := c.FormValue("date1")
 	date2 := c.FormValue("date2")
@@ -183,26 +203,26 @@ func addProject(c echo.Context) error {
 	// 	react = true
 	// }
 	var newBlog = Blog{
-		Title:      title,
-		StartDate:  date1,
-		EndDate:    date2,
-		Content:    content,
-		Author:     "user",
-		VueJs:      true, //belum berhasil pengkondisian checkbox user
-		AngularJs:  true,
-		JavaScript: true,
-		ReactJs:    true, //
+		Title:     title,
+		StartDate: date1,
+		EndDate:   date2,
+		Content:   content,
+		Author:    "user",
+		// VueJs:      true, //belum berhasil pengkondisian checkbox user
+		// AngularJs:  true,
+		// JavaScript: true,
+		// ReactJs:    true,
 	}
 
 	dataBlog = append(dataBlog, newBlog)
 	fmt.Println(dataBlog)
 
-	return c.Redirect(http.StatusMovedPermanently, "/index")
+	return c.Redirect(http.StatusMovedPermanently, "/home")
 }
 func deleteBlog(c echo.Context) error {
 	id, _ := strconv.Atoi(c.Param("id"))
 	fmt.Println("Deleted :", id)
 	dataBlog = append(dataBlog[:id], dataBlog[id+1:]...)
 
-	return c.Redirect(http.StatusMovedPermanently, "/index")
+	return c.Redirect(http.StatusMovedPermanently, "/home")
 }

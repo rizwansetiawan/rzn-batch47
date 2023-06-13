@@ -2,16 +2,15 @@
 @media only screen and (max-width:900px){
     div#containerCard{display: grid !important;grid-template-columns: auto auto !important;}
     div#myCard{margin-left: 0 !important;width: 22rem;margin-left:20px !important;height: 53vh !important;}
-    /* button#childCard1{padding:6.5px 30px !important;} */
     .card-body{display: inline !important;position: relative;top: 50px;}
     #childCard2{position: absolute;top: 10px;left: 165px;margin-left: 0!important;padding:6.5px 45px !important;}
-   #firstContainer{width: 80vw;height: 800px;background-color: lightgrey;position: relative;}
-   div.content2{width: 300px;height: 320px;position: absolute;top: 57%;left: 80px;}
-   img.photo-steve{width: 80%;height: 70%;margin-left: 30px;}
-   div.content1{width: 80%;height: 50%;margin: 10px auto}
-   p.content-paragraf{text-align: left}
-   #burgerMenu{display: block}
-   li a#condition{margin-left: 0 !important;}
+    #firstContainer{width: 80vw;height: 800px;background-color: lightgrey;position: relative;}
+    div.content2{width: 300px;height: 320px;position: absolute;top: 57%;left: 80px;}
+    img.photo-steve{width: 80%;height: 70%;margin-left: 30px;}
+    div.content1{width: 80%;height: 50%;margin: 10px auto}
+    p.content-paragraf{text-align: left}
+    #burgerMenu{display: block}
+    li a#condition{margin-left: 0 !important;}
 };
 
 .ri-menu-line{display: none;}
@@ -23,7 +22,6 @@ div#containerCard{display:grid;grid-template-columns:auto auto auto;margin: 50px
     box-shadow: 0 0 15px black;
     border-radius: 5px;
     display: flex;
-    /* height: 600px; */
 
 }
 div#myCard{transition: .8s;}
@@ -96,12 +94,13 @@ i:hover{color: rgb(42, 85, 255);}
 #childMyCardwidth{width:  24rem;}
 .text-photo{text-align: center;}
 #myCard{width: 25.2rem;box-shadow: 0 0 5px #3c3c3c;}
+
 @media only screen and (max-width:430px){
     div#containerCard{display: grid !important;grid-template-columns: auto !important;}
     div#myCard{margin-left: 0 !important;width: 20rem;margin-left:20px !important;height: 560px !important;}
     div#childMyCard{width: 19rem !important;margin-left:0 !important;}
     .card-body{display: inline !important;position: relative;top: 50px;}
-    button#childCard1{padding:6.5px 30px !important;}
+    /* .card-body button#childCard1{margin-top: -299px !important;} */
     button#childCard2{position: absolute;top: 10px;left: 160px;margin-left: 0!important;padding:6.5px 40px !important;}
     div.container#firstContainer{width: 96vw !important;height: 1050px;position: relative;}
     div#contenTwo{width: 70%;height: 35%;margin: 65px 0 10px -32px}
