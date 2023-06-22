@@ -1,7 +1,7 @@
 package main
 
 import (
-	"b47s1/connection"
+	// "b47s1/connection"
 	"fmt"
 	"net/http"
 	"strconv"
@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	connection.DatabaseConnect()
+	// connection.DatabaseConnect()
 
 	e := echo.New()
 
@@ -22,7 +22,7 @@ func main() {
 	e.GET("/contact", contact)
 	e.GET("/blog", blog)
 	e.GET("/testimonials", testimonials)
-	e.GET("blog-detail/:id", blogDetail)
+	// e.GET("blog-detail/:id", blogDetail)
 
 	e.POST("/add-project", addProject)
 	e.POST("/delete-blog/:id", deleteBlog)
@@ -114,40 +114,40 @@ func blog(c echo.Context) error {
 	return tmp.Execute(c.Response(), nil)
 }
 
-func blogDetail(c echo.Context) error {
-	id, _ := strconv.Atoi(c.Param("id"))
-	//data := map[string]interface{}{
-	// "Id":      id,
-	// "title":   "dumbways mobile app",
-	// "content": "Some quick example text to build on the card title and make up the bulk of the cards content",
-	//	}
-	var BlogDetail = Blog{}
+// func blogDetail(c echo.Context) error {
+// 	id, _ := strconv.Atoi(c.Param("id"))
+// 	//data := map[string]interface{}{
+// 	// "Id":      id,
+// 	// "title":   "dumbways mobile app",
+// 	// "content": "Some quick example text to build on the card title and make up the bulk of the cards content",
+// 	//	}
+// 	var BlogDetail = Blog{}
 
-	for i, data := range dataBlog {
-		if id == i {
-			BlogDetail = Blog{
-				Title:      data.Title,
-				StartDate:  data.StartDate,
-				EndDate:    data.EndDate,
-				Content:    data.Content,
-				Author:     data.Author,
-				VueJs:      data.VueJs,
-				AngularJs:  data.AngularJs,
-				JavaScript: data.JavaScript,
-				ReactJs:    data.ReactJs,
-			}
-		}
-	}
-	data := map[string]interface{}{
-		"Blog": BlogDetail,
-	}
+// 	for i, data := range dataBlog {
+// 		if id == i {
+// 			BlogDetail = Blog{
+// 				Title:      data.Title,
+// 				StartDate:  data.StartDate,
+// 				EndDate:    data.EndDate,
+// 				Content:    data.Content,
+// 				Author:     data.Author,
+// 				VueJs:      data.VueJs,
+// 				AngularJs:  data.AngularJs,
+// 				JavaScript: data.JavaScript,
+// 				ReactJs:    data.ReactJs,
+// 			}
+// 		}
+// 	}
+// 	data := map[string]interface{}{
+// 		"Blog": BlogDetail,
+// 	}
 
-	var tmp, err = template.ParseFiles("views/blog-detail.html")
-	if err != nil {
-		return c.JSON(http.StatusInternalServerError, map[string]string{"message": err.Error()})
-	}
-	return tmp.Execute(c.Response(), data)
-}
+// 	var tmp, err = template.ParseFiles("views/blog-detail.html")
+// 	if err != nil {
+// 		return c.JSON(http.StatusInternalServerError, map[string]string{"message": err.Error()})
+// 	}
+// 	return tmp.Execute(c.Response(), data)
+// }
 
 func testimonials(c echo.Context) error {
 	var tmp, err = template.ParseFiles("views/testimonials.html")
@@ -166,36 +166,48 @@ func addProject(c echo.Context) error {
 	// println("end date :" + date2)
 	// println("description:" + content)
 
-	// var vue bool
-	// if c.FormValue("vueJs") == "checked" {
-	// 	vue = true
-	// }
-	// var angular bool
-	// if c.FormValue("angularJs") == "checked" {
-	// 	angular = true
-	// }
-	// var javascript bool
-	// if c.FormValue("javascript") == "checked" {
-	// 	javascript = true
-	// }
-	// var react bool
-	// if c.FormValue("reactJs") == "checked" {
-	// 	react = true
-	// }
+	var vue bool
+	if c.FormValue("vueJs") == "checked" {
+		vue = true
+	} else {
+		vue = false
+	}
+	var angular bool
+	if c.FormValue("angularJs") == "checked" {
+		angular = true
+	} else {
+		angular = false
+	}
+	var javascript bool
+	if c.FormValue("javascript") == "checked" {
+		javascript = true
+	} else {
+		javascript = false
+	}
+	var react bool
+	if c.FormValue("reactJs") == "checked" {
+		react = true
+	} else {
+		react = false
+	}
 	var newBlog = Blog{
 		Title:      title,
 		StartDate:  date1,
 		EndDate:    date2,
 		Content:    content,
 		Author:     "user",
-		VueJs:      true, //belum berhasil pengkondisian checkbox user
-		AngularJs:  true,
-		JavaScript: true,
-		ReactJs:    true, //
+		VueJs:      vue, //belum berhasil pengkondisian checkbox user
+		AngularJs:  angular,
+		JavaScript: javascript,
+		ReactJs:    react,
 	}
 
 	dataBlog = append(dataBlog, newBlog)
-	fmt.Println(dataBlog)
+	fmt.Println("vue :", vue)
+	fmt.Println("angular :", angular)
+	fmt.Println("javascript :", javascript)
+	fmt.Println("react :", react)
+	// fmt.Println(dataBlog)
 
 	return c.Redirect(http.StatusMovedPermanently, "/index")
 }
